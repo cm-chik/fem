@@ -4,31 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Social links profile</title>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+  rel="stylesheet"
+/>
+<script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+<title>Frontend Mentor | Social Links Profile</title>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          Inter: ["Inter", "sans-serif"],
+        },
+        colors: {
+          "sharp-green": "hsl(75, 94%, 57%)",
+          "light-gray": "hsl(0, 0%, 20%)",
+          "medium-gray": "hsl(0, 0%, 12%)",
+          "deep-gray": "hsl(0, 0%, 8%)",
+        },
+      },
+    },
+  };
+</script>
 </head>
-<body>
-
-  Jessica Randall
-  London, United Kingdom
-  "Front-end developer and avid reader."
-
-  GitHub
-  Frontend Mentor
-  LinkedIn
-  Twitter
-  Instagram
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+<body class="bg-deep-gray h-screen flex flex-col items-center justify-center">
+  <div class="w-[330px] h-[500px] rounded-2xl bg-medium-gray font-Outfit text-white flex flex-col items-center justify-normal p-6">
+    <img src="./assets/images/avatar-jessica.jpeg" height="72" width="72" class="rounded-full pb-4">
+    <p class="text-2xl pb-2">Jessica Randall</p>
+    <p class="text-sharp-green text-xs font-bold pb-6">London, United Kingdom</p>
+    <p class="font-normal pb-3 text-xs light-white">"Front-end developer and avid reader."</p>
+      <button class="w-full bg-light-gray text-xs font-bold m-2 p-2 rounded-md">GitHub</button>
+      <button class="w-full bg-light-gray text-xs font-bold m-2 p-2 rounded-md">Frontend Mentor</button>
+      <button class="w-full bg-light-gray text-xs font-bold m-2 p-2 rounded-md">LinkedIn</button>
+      <button class="w-full bg-light-gray text-xs font-bold m-2 p-2 rounded-md">Twitter</button>
+      <button class="w-full bg-light-gray text-xs font-bold m-2 p-2 rounded-md">Instagram</button>
   </div>
+  
 </body>
 </html>
