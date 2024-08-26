@@ -4,6 +4,7 @@ module.exports = {
      extend: {
         fontFamily: {
            'outfit': ['Outfit'],
+           'figtree':['Figtree'],
         }
      }
   }
