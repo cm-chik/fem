@@ -26,21 +26,25 @@
   </script>
 </head>
 <body class="bg-bright-yellow h-screen flex flex-col items-center justify-center">
-  <div
-    class="font-Figtree w-[330px] h-[500px] border-black border-2 bg-white rounded-2xl p-6 flex flex-col justify-between text-sm space-y-1">
+  <card
+    class="font-Figtree w-[330px] h-[500px] shadow-[8px_8px_0px_0px_#000000] border-black border-2 bg-white rounded-2xl p-6 flex flex-col justify-between text-sm">
     <img src="assets/images/illustration-article.svg" width="279" class="rounded-lg">
     <div class="flex-col justify-start items-start">
       <div class="bg-bright-yellow font-bold rounded-md py-1 px-2 inline-block text-xs ">Learning</div>
     </div>
     <div class="text-xs mb-1">Published 21 Dec 2023</div>
-    <h1 class="font-bold text-xl">HTML & CSS foundations</h1>
-    <div class="text-middle-gray"> These languages are the backbone of every website, defining structure, content and
+    <h1
+      class="font-bold text-xl hover:cursor-pointer hover:text-bright-yellow active:text-bright-yellow transition-colors duration-[0.5s]">
+      HTML & CSS
+      foundations</h1>
+    <div class="text-middle-gray leading-5"> These languages are the backbone of every website, defining structure,
+      content and
       presentation.</div>
-    <div class="flex justify-start items-center space-x-2 ">
+    <div class="flex justify-start items-center gap-3 ">
       <img src="assets/images/image-avatar.webp" height="32" width="32">
       <p class="font-bold">Greg Hooper</p>
     </div>
-  </div>
+  </card>
   </div>
 </body>
 </html>
