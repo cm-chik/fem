@@ -5,6 +5,7 @@ module.exports = {
         fontFamily: {
            'outfit': ['Outfit'],
            'figtree':['Figtree'],
+           'youngSerif':['Young Serif'],
         }
      }
   }
