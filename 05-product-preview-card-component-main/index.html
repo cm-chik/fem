@@ -21,7 +21,7 @@
             "Fraunces": ["Fraunces", "sans-serif"],
           },
           colors: {
-            "Dark cyan": "hsl(158, 36%, 37%)",
+            "DarkCyan": "hsl(158, 36%, 37%)",
             "Cream": "hsl(30, 38%, 92%)",
             "Vdblue": "hsl(212, 21%, 14%)",
             "Dgblue": "hsl(228, 12%, 48%)"
@@ -31,25 +31,26 @@
     };
   </script>
 </head>
-<body class="bg-Cream">
-  <main class="flex items-center justify-center min-h-screen p-4">
-  <div class="sm:flex sm:justify-center sm:items-center bg-white rounded-x text-Dgblue text-sm">
+<body class="bg-Cream ">
+  <main class="flex items-center justify-center min-h-screen p-4 ">
+  <div class="sm:flex sm:justify-between bg-white rounded-xl text-Dgblue max-w-xl text-xs">
     <picture>
     <source media="(min-width:640px)" 
     srcset="./images/image-product-desktop.jpg">
     <img src="./images/image-product-mobile.jpg" style="width: 100%;"  class="rounded-t-lg sm:rounded-l-xl sm:rounded-r-none">
       </picture>
-        <div class="p-8 md:p-10">
-          <h3 class="font-Montserrat uppercase tracking-[8px]">Perfume</h3>
-          <h1>Gabrielle Essence Eau De Parfum</h1>
-        
-          <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-          Perfumer-Creator for the House of CHANEL.</p>
-        
-          <h2>$149.99</h2>
-          <h2>$169.99</h2>
-        
-          <button> Add to Cart</button></div></div>
+       <div class="flex justify-between">
+        <div class="p-8">
+        <h3 class="font-Montserrat uppercase tracking-[8px] py-2 ">Perfume</h3>
+        <h1 class="font-Fraunces text-3xl font-bold text-black ">Gabrielle Essence Eau De Parfum</h1>
+      
+        <p class="py-2 leading-5">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+        Perfumer-Creator for the House of CHANEL.</p>
+        <div class="w-[80%] flex items-center">
+        <h2 class="font-Fraunces text-2xl font-bold text-DarkCyan pr-4">$149.99</h2>
+        <h2 class="text-xs line-through">$169.99</h2>
+        </div>
+        <button class="w-[100%] my-4 bg-DarkCyan font-Montserrat font-bold text-white py-4 rounded-xl text-center hover:bg-Vdblue">Add to Cart</button></div></div></div>
   </main>
 </body>
 </html>
