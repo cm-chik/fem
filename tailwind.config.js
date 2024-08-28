@@ -8,6 +8,7 @@ module.exports = {
         youngSerif: ["Young Serif"],
         Montserrat: ["Montserrat"],
         Fraunces: ["Fraunces"],
+        Poppins: ["Poppins"],
       },
     },
   },
