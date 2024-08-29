@@ -32,31 +32,40 @@
     };
   </script>
 </head>
-<body class="w-96 flex flex-col py-12 items-center justify-center font-Poppins text-GrayishBlue text-start">
-    <div class="flex flex-col items-center justify-center ">
+<body class="flex flex-col py-12 px-8 items-center justify-center font-Poppins text-GrayishBlue text-start bg-VeryLightGray">
+    <div class="max-w-[600px] flex flex-col items-center justify-center text-center py-12">
       <h2 class="font-light text-3xl VeryDarkBlue">Reliable, efficient delivery</h2>
       <h1 class="font-bold text-3xl py-3 text-VeryDarkBlue">Powered by Technology</h1>
       <p class="">Our Artificial Intelligence powered tools use millions of project data points 
       to ensure that your project is successful</p>
     </div>
-    <div class="md:flex  md:justify-center md:items-center">
-    <div class="">
-      Supervisor
-      Monitors activity to identify project roadblocks
-    </div>
-    <div class="">
-      <div class="">
-        Team Builder
-        Scans our talent network to create the optimal team for your project
+    <div class="max-w-[1000px] px-8 md:flex md:justify-around md:items-center space-y-6 md:space-x-6">
+      <div class="flex-1">
+        <article class="box-content p-6 bg-white shadow-2xl border-t-Cyan border-t-4 rounded-md"> <!-- 添加 flex 和 justify-end -->
+          <h3 class="font-bold text-xl text-VeryDarkBlue">Supervisor</h3>
+          <p class="text-xs leading-6">Monitors activity to identify project roadblocks</p>
+          <div class="flex justify-end w-full">
+          <img src="./images/icon-supervisor.svg" class="h-10 mt-6 mb-2 "></div>
+        </article>
       </div>
-      <div class="">
-        Karma
-        Regularly evaluates our talent to ensure quality
+      <div class="box-content flex-1 space-y-6">
+        <article class=" bg-white shadow-2xl p-6 border-t-Red border-t-4 rounded-md">
+          <h3 class="font-bold text-xl text-VeryDarkBlue">Team Builder</h3>
+          <p class="text-xs leading-6">Scans our talent network to create the optimal team for your project</p>
+          <div class="flex justify-end w-full"><img src="./images/icon-team-builder.svg" class="h-10 mt-6 "></div>
+        </article>
+        <article class=" bg-white shadow-2xl p-6 border-t-Orange border-t-4 rounded-md">
+          <h3 class="font-bold text-xl text-VeryDarkBlue pb-2">Karma</h3>
+          <p class="text-xs leading-6">Regularly evaluates our talent to ensure quality</p>
+          <div class="flex justify-end w-full"><img src="./images/icon-karma.svg" class="h-10 mt-6 mb-2"></div>
+        </article>
       </div>
-    </div>
-    <div class="">
-      Calculator
-      Uses data from past projects to provide better delivery estimates
+      <div class="flex-1">
+      <article class="bg-white shadow-2xl p-6  border-t-Blue border-t-4 rounded-md">
+        <h3 class="font-bold text-xl text-VeryDarkBlue pb-2">Calculator</h3>
+        <p class="text-xs leading-6">Uses data from past projects to provide better delivery estimates</p>
+        <div class="flex justify-end w-full"><img src="./images/icon-calculator.svg" class="h-10 mt-6 mb-2"></div>
+      </article>
     </div>
   </div>
   </div>

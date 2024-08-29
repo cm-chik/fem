@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './05-product-preview-card-component-main'
+          path: './06-four-card-feature-section-master'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
