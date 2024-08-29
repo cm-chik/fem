@@ -9,6 +9,7 @@ module.exports = {
         Montserrat: ["Montserrat"],
         Fraunces: ["Fraunces"],
         Poppins: ["Poppins"],
+        Barlow: ["Barlow Semi Condensed"],
       },
     },
   },
