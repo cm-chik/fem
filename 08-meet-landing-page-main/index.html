@@ -23,7 +23,6 @@
           "light-cyan": "#b3e5e5",
           "light-violet": "#f2d9f2",
           "black": "#373752",
-          "gray": "#a3a3c4",
           "light-gray": "#a3a3c4",
           "white": "#f2f2f2",
           "cyan-hover": "#4dbbbb",
@@ -35,20 +34,20 @@
   </script>
 </head>
 
-<body class="flex flex-col items-center justify-center text-center">
-  <div id="header" class="flex flex-col items-center justify-center">
-    <img src="./assets/logo-hover.svg" class="pt-14 pb-4" >
-    <div class="xl:flex items-center justify-center text-center">
-      <div class="group">
-        <img src="./assets/desktop/image-hero-left.png" alt="image" class="transition-opacity duration-300 group-hover:opacity-0 ">
-        <img src="./assets/desktop/image-hero-left-hover.png" alt="image" class="hidden group-hover:block transition-opacity duration-300">
+<body class="flex flex-col items-center justify-center text-center text-black">
+  <img src="assets/logo-hover.svg" class="pt-14 pb-4" >
+  <div class="">
+    <div class="flex flex-grow items-center justify-center text-center space-x-10">
+      <div class="overflow-hiden xl:flex-1 xl:min-h-[300px] xl:min-w-[393px] xl:bg-cover xl:bg-[url('./assets/desktop/image-hero-left.png')] xl:hover:bg-[url('./assets/desktop/image-hero-left-hover.png')] xl:duration-300"></div>
+      <div>
+        <h1 class="flex-1 p-10 text-6xl font-bold text-black">Group Chat for Everyone</h1>
+        <p class="py-4">Meet makes it easy to connect with others strong face-to-face virtually and collaborate across any device.</p>
+        <button class="bg-cyan-hover text-white text-sm p-4 rounded-3xl font-bold">Download <span class="text-light-cyan">v1.3</span></button>
+        <button class="bg-violet-hover text-light-violet text-sm p-4 rounded-3xl font-bold">What is it?</button>
       </div>
-      <h1 class="py-10 xl:flex">Group Chat for Everyone</h1>
-      <img src="./assets/desktop/image-hero-right.png" class="hover:bg-url['./assets/desktop/image-hero-right-hover.png']">
+      <div class="overflow-hidden xl:flex-1xl: xl:min-h-[300px] xl:min-w-[393px] xl:bg-cover xl:bg-[url('./assets/desktop/image-hero-right.png')] xl:hover:bg-[url('./assets/desktop/image-hero-right-hover.png')] xl:duration-300"></div>
     </div>
-    <p>Meet makes it easy to connect with others strong face-to-face virtually and collaborate across any device.</p>
-    <button>Download v1.3</button>
-    <button>What is it?</button>
+
   </div>
   <div id="first">
     01
