@@ -1,39 +1,33 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  
   <title>Meet Landing Page | correlucas</title>
-
-  <link rel="icon" href="./images/favicon-32x32.png" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css">
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            "Barlow": ["Barlow Semi Condensed", "sans-serif"],
+            "IBM": ["IBM Plex Sans", "sans-serif"],
           },
           colors: {
-          /* primary */
-          "dark-cyan": "hsla(192, 37%, 48%, 1)",
-          "dark-violet": "hsla(268, 34%, 53%, 1)",
-          /* secondary */
-          "light-cyan": "hsla(192, 90%, 77%, 1)",
-          "light-violet": "hsla(268, 100%, 86%, 1)",
-          /* neutral */
-          "black": "rgb(55, 55, 82)",
-          "gray": "hsla(240, 10%, 57%, 1)",
-          "light-gray": "hsla(240, 10%, 57%, 0.25)",
-          "white": "hsla(0, 0%, 98%, 1)",
-          /* buttom hover */
-          "cyan-hover": "hsla(192, 54%, 64%, 1)",
-          "violet-hover": "hsla(268, 55%, 71%, 1)",
+          "dark-cyan": "#2f7d7d",
+          "dark-violet": "#5a3f5a",
+          "light-cyan": "#b3e5e5",
+          "light-violet": "#f2d9f2",
+          "black": "#373752",
+          "gray": "#a3a3c4",
+          "light-gray": "#a3a3c4",
+          "white": "#f2f2f2",
+          "cyan-hover": "#4dbbbb",
+          "violet-hover": "#8c5e8c"
           },
         },
       },
@@ -41,10 +35,17 @@
   </script>
 </head>
 
-<body class="font-IBM flex items-center">
-<div class="">
-  <div id="header" class="s">
-    <h1>Group Chat for Everyone</h1>
+<body class="flex flex-col items-center justify-center text-center">
+  <div id="header" class="flex flex-col items-center justify-center">
+    <img src="./assets/logo-hover.svg" class="pt-14 pb-4" >
+    <div class="xl:flex items-center justify-center text-center">
+      <div class="group">
+        <img src="./assets/desktop/image-hero-left.png" alt="image" class="transition-opacity duration-300 group-hover:opacity-0 ">
+        <img src="./assets/desktop/image-hero-left-hover.png" alt="image" class="hidden group-hover:block transition-opacity duration-300">
+      </div>
+      <h1 class="py-10 xl:flex">Group Chat for Everyone</h1>
+      <img src="./assets/desktop/image-hero-right.png" class="hover:bg-url['./assets/desktop/image-hero-right-hover.png']">
+    </div>
     <p>Meet makes it easy to connect with others strong face-to-face virtually and collaborate across any device.</p>
     <button>Download v1.3</button>
     <button>What is it?</button>
@@ -66,7 +67,5 @@
     <p></p>Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
     <button>Download v1.3</button>
   </div>
-</div>
 </body>
-
 </html>
