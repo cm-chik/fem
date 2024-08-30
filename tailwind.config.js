@@ -10,6 +10,7 @@ module.exports = {
         Fraunces: ["Fraunces"],
         Poppins: ["Poppins"],
         Barlow: ["Barlow Semi Condensed"],
+        IBM: ["IBM Plex Sans"],
       },
     },
   },

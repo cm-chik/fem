@@ -9,17 +9,46 @@
   <title>Meet Landing Page | correlucas</title>
 
   <link rel="icon" href="./images/favicon-32x32.png" type="image/x-icon">
-
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./style.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            "Barlow": ["Barlow Semi Condensed", "sans-serif"],
+          },
+          colors: {
+          /* primary */
+          "dark-cyan": "hsla(192, 37%, 48%, 1)",
+          "dark-violet": "hsla(268, 34%, 53%, 1)",
+          /* secondary */
+          "light-cyan": "hsla(192, 90%, 77%, 1)",
+          "light-violet": "hsla(268, 100%, 86%, 1)",
+          /* neutral */
+          "black": "rgb(55, 55, 82)",
+          "gray": "hsla(240, 10%, 57%, 1)",
+          "light-gray": "hsla(240, 10%, 57%, 0.25)",
+          "white": "hsla(0, 0%, 98%, 1)",
+          /* buttom hover */
+          "cyan-hover": "hsla(192, 54%, 64%, 1)",
+          "violet-hover": "hsla(268, 55%, 71%, 1)",
+          },
+        },
+      },
+    };
+  </script>
 </head>
 
-<body>
-  <div>
-    Group Chat for Everyone
-    Meet makes it easy to connect with others strong face-to-face virtually and collaborate across any device.
-    Download v1.3
-    What is it?
-    
+<body class="font-IBM">
+  <div id="header" class="">
+    <h1>Group Chat for Everyone</h1>
+    <p>Meet makes it easy to connect with others strong face-to-face virtually and collaborate across any device.</p>
+    <button>Download v1.3</button>
+    <button>What is it?</button>
+  </div>
+  <div id="first">
     01
     
     photo gallery
@@ -31,12 +60,13 @@
     Built for modern use
     Smarter meetings, all in one place
     Send messages, share files, show your screen, and record your meetings — all in one workspace. Control who can join with invite-only team access, data encryption, and data export.
-    
+  </div>    
     02
-    
+    <div id="second">
     Experience more together
     Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
     Download v1.3
+  </div>
 </body>
 
 </html>
