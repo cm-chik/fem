@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './08-meet-landing-page-main'
+          path: './09-article-preview-component-master'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
