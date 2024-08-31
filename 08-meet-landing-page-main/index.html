@@ -34,19 +34,36 @@
   </script>
 </head>
 
-<body class="flex flex-col items-center justify-center text-center text-black">
+<body class="flex flex-col items-center  text-center text-black">
   <img src="assets/logo-hover.svg" class="pt-14 pb-4" >
-    <div class="flex items-center justify-center text-center space-x-10">
-      <div class="xl:hidden  min-h-[300px] min-w-[820px] bg-cover bg-[url('./assets/tablet/image-hero.png')] hover:bg-[url('./assets/tablet/image-hero-hover.png')] duration-300"></div>
-      <div class="hidden xl:flex flex-1 min-h-[300px] min-w-[393px] bg-cover bg-[url('./assets/desktop/image-hero-left.png')] xl:hover:bg-[url('./assets/desktop/image-hero-left-hover.png')] xl:duration-300"></div>
-        <h1 class="flex p-10 text-5xl font-IBM font-[900] text-black">Group Chat for <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#855FB1] to-[#4D96A9]">Everyone</span></h1>
-        <p class="flex py-4">Meet makes it easy to connect with others strong face-to-face virtually and collaborate across any device.</p>
-        <button class="flex bg-cyan-hover text-white text-sm p-4 rounded-3xl font-bold">Download <span class="text-light-cyan">v1.3</span></button>
-        <button class="flex bg-violet-hover text-light-violet text-sm p-4 rounded-3xl font-bold">What is it?</button>
+    <div class="flex flex-col xl:flex-row items-center justify-center">
+      <div class="relative">
+        <image src="./assets/desktop/image-hero-left.png" class="max-xl:hidden hover:opacity-0 transition-opacity duration-300 ease-out"></image>
+        <image src="./assets/desktop/image-hero-left-hover.png" class="max-xl:hidden opacity-0 absolute top-0 left-0 hover:opacity-100 transition-opacity duration-300 ease-out"></image>
       </div>
-      <div class="hidden xl:flex xl:flex-1 xl:min-h-[300px] xl:min-w-[393px] xl:bg-cover xl:bg-[url('./assets/desktop/image-hero-right.png')] xl:hover:bg-[url('./assets/desktop/image-hero-right-hover.png')] xl:duration-300"></div>
+      <div class="relative justify-center items-center">
+        <image src="./assets/tablet/image-hero.png" class="xl:hidden w-[100vw] bg-cover hover:opacity-0 duration-300"></image>
+        <image src="./assets/tablet/image-hero-hover.png" class="xl:hidden w-[100vw] bg-cover opacity-0 absolute top-0 left-0 hover:opacity-100 duration-300"></image>
+      </div>
+      <div class="hidden xl:relative justify-center items-center">
+      </div>
+      <!-- start of header text -->
+      <div class="flex flex-col justify-center px-10 max-w-[640px]">
+        <h1 class=" pt-14 pb-6 text-[40px] leading-[60px] xl:text-[60px] xl:leading-[80px] font-IBM font-[900] text-black">Group Chat <br>for 
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#855FB1] to-[#4D96A9]">Everyone</span>
+        </h1>
+        <p class="flex pt-4 pb-8 leading-6 text-sm">Meet makes it easy to connect with others strong face-to-face virtually and collaborate across any device.</p>
+        <div class="max-sm:space-y-4 sm:space-x-6 pb-6">
+          <button class="bg-cyan-hover text-white text-sm py-3 px-6 rounded-full font-bold">Download <span class="text-light-cyan"> v1.3</span></button>
+          <button class="bg-violet-hover text-light-violet text-sm  py-3 px-6 rounded-full font-bold">What is it?</button>
+        </div>
+      </div>
+      <!-- end of header text -->
+      <div class="relative">
+        <image src="./assets/desktop/image-hero-left.png" class="max-xl:hidden hover:opacity-0 transition-opacity hover:ease-out hover:duration-300"></image>
+        <image src="./assets/desktop/image-hero-left-hover.png" class="max-xl:hidden opacity-0 absolute top-0 left-0 transition-opacity ease-in hover:opacity-100"></image>
+      </div>
     </div>
-
   </div>
   <div id="first">
     01
