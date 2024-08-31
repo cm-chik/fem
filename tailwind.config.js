@@ -11,6 +11,7 @@ module.exports = {
         Poppins: ["Poppins"],
         Barlow: ["Barlow Semi Condensed"],
         IBM: ["IBM Plex Sans"],
+        Manrope: ["Manrope"],
       },
     },
   },
