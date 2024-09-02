@@ -9,6 +9,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Frontend Mentor | Article preview component</title>
 
+  <link rel="stylesheet" href="./assets/css/styles.css">
 <script>
   tailwind.config = {
     theme: {
@@ -29,9 +30,8 @@
 </head>
 
 <body class="font-Manrope bg-light-grayish-blue grid justify-center items-center h-screen">
-  <div class="m-3 grid max-md:flex-col max-w-[25rem] md:max-w-[45.625rem] rounded-xl justify-center items-center shadow-2xl bg-white maxh-[528px] md:grid-cols-[auto,1fr]"> 
-    <img src="./images/drawers.jpg" width="528"
-    height="280" class="h-full w-full object-cover md:max-h-[24rem] md:max-w-[20rem] md:object-left md:rounded-l-xl max-md:rounded-t-xl">
+  <div class="m-3 grid max-w-[25rem] md:max-w-[45.625rem] rounded-xl justify-center items-center shadow-2xl bg-white  md:grid-cols-[auto,1fr]"> 
+    <img src="./images/drawers.jpg" class="h-full object-cover md:max-h-[24rem] md:max-w-[20rem] md:object-left md:rounded-l-xl max-md:rounded-t-xl">
     <div class="flex flex-col p-8">
       <h1 class="font-bold text-xl py-2">Shift the overall look and feel by adding these wonderful 
       touches to furniture in your home</h1>
@@ -44,11 +44,55 @@
           <p class="text-very-dark-grayish-blue font-bold text-xs py-1">Michelle Appleton</p>
           <time datetime="2020-06-28" class="text-grayish-blue text-xs">28 Jun 2020</time>
         </div>
-        <button class="rounded-full p-4 bg-light-grayish-blue ml-auto hover:bg-desaturated-dark-blue transition-all ">
+        <button class="js-toogle-tip rounded-full p-4 bg-light-grayish-blue ml-auto hover:bg-desaturated-dark-blue transition-all" aria-haspopup="true" aria-expanded="false">
         <img src="./images/icon-share.svg" alt="Share" width="15" height="13" class="hover:saturate-100 hover:invert-0 hover:hue-rotate-[70]"/>
         </button>
       </div>
+      <!-- share details -->
+      <div
+        class="js-tooltip dialog transition-visibility | shadow-tooltip bg-very-dark-grayish-blue invisible flex items-center gap-4 rounded-b-lg py-[1.4rem] px-9 text-white opacity-0"
+      >
+        <h2 class="text-grayish-blue uppercase tracking-[0.3125rem]">
+          Share
+        </h2>
+        <ul role="list" class="flex items-center gap-4">
+          <li role="listitem">
+            <a href="#" class="block">
+              <img
+                src="./images/icon-facebook.svg"
+                alt="Facebook"
+                width="20"
+                height="20"
+                class="hover:filter-gray transition-all"
+              />
+            </a>
+          </li>
+          <li role="listitem">
+            <a href="#" class="block">
+              <img
+                src="./images/icon-twitter.svg"
+                alt="Twitter"
+                width="20"
+                height="20"
+                class="hover:filter-gray transition-all"
+              />
+            </a>
+          </li>
+          <li role="listitem">
+            <a href="#" class="block">
+              <img
+                src="./images/icon-pinterest.svg"
+                alt="Pinterest"
+                width="20"
+                height="20"
+                class="hover:filter-gray transition-all"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
