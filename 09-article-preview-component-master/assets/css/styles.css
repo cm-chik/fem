@@ -6,4 +6,17 @@
     .transition-visibility {
         transition: visibility 0s, opacity 0.2s ease-in-out;
     }
+    .dialog-footer::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 1.25rem 0rem 0.6875rem 0.9375rem;
+        border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+        top: 81%;
+        right: -2%;
+        transform: rotate(326deg);
+      }
+      
 }

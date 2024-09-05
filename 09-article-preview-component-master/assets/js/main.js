@@ -1,12 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const shareButton = document.querySelector('.js-toggle-tip');
-const shareTooltip = document.querySelector('.js-tooltip');
+const shareButton = document.getElementById('js-toggle-tip');
+shareButton.addEventListener('click', toogleTooltip);
 
-shareButton.addEventListener('click', () => {
-    const isExpanded = shareButton.getAttribute('aria-expanded') === 'true';
-    shareButton.setAttribute('aria-expanded', !isExpanded);
-    shareTooltip.classList.toggle('invisible', isExpanded);
-    shareTooltip.classList.toggle('opacity-0', isExpanded);
-  });
+function toogleTooltip () {
+    const shareTooltip = document.getElementById('js-tooltip');
+    shareTooltip.classList.toggle("opacity-0")
+    }
 
-});
