@@ -6,8 +6,11 @@
     .transition-visibility {
         transition: visibility 0s, opacity 0.2s ease-in-out;
     }
+    .dialog-footer{
+        position: relative;
+    }
     .dialog-footer::after {
-        content: "";
+        content: "abcccccccccccccccccccccccccccccccccccccc";
         position: absolute;
         width: 0;
         height: 0;
