@@ -90,6 +90,7 @@
     }
 
     @screen md {
+        
         .dialog {
             width: fit-content;
             position: absolute;
