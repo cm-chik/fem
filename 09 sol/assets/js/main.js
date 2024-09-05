@@ -16,7 +16,7 @@ const hideTooltips = () => {
 
 // Event listener for keydown on document (If the Escape key is pressed, hide all tooltips)
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escapea") {
+  if (event.key === "Escape") {
     hideTooltips();
   }
 });
