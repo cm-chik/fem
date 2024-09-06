@@ -2,6 +2,7 @@ const form = document.getElementById("newsletter-form");
 const formDiv = document.getElementById("sign-up-form");
 const successDiv = document.getElementById("success-message");
 const dismissBtn = document.getElementById("dismiss-button");
+const emailDisplay = document.getElementById("email-display");
 
 function isValidEmailAddress(textValue) {
   const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
@@ -24,6 +25,7 @@ function handleSubmit(event) {
     console.log("Correct email format");
     formDiv.classList.toggle("hidden");
     successDiv.classList.toggle("hidden");
+    emailDisplay.textContent = emailInput.value;
   } else {
     console.log("Invalid email format");
     errorMessage.classList.remove("hidden");

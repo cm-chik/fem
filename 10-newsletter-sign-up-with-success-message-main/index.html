@@ -30,8 +30,9 @@
     };
   </script>
 </head>
-<body class="font-Manrope md:grid justify-center items-center flex-wrap h-screen bg-charcoal-grey max-md:bg-white">
-  <div class="md:border-2 max-w-[1080px] bg-white md:p-8 gap-8 rounded-xl grid md:grid-cols-[1fr,auto]">
+<body
+  class="font-Manrope md:grid justify-center flex-wrap h-screen bg-charcoal-grey max-md:bg-white  flex items-center">
+  <div class="md:border-2 max-w-[1080px] bg-white md:p-8 gap-8 rounded-xl md:grid md:grid-cols-[1fr,auto]">
     <!-- Sign-up form start -->
         <div id="sign-up-form">
           <picture class="md:order-2">
@@ -61,11 +62,11 @@
             </form>
             </div>
         </div>
-        <div id="success-message" class="hidden max-w-[320px] bg-white md:p-8 gap-8 rounded-xl">
+        <div id="success-message" class="hidden max-w-[320px] bg-white md:p-8 gap-8 rounded-xl ">
           <img src="./assets/images/icon-success.svg" width="64" height="64">
           <p class="text-5xl font-bold pt-8 py-2">Thanks for subscribing!</p>
           <p class="py-4 text-">
-            A confirmation email has been sent to ${getQueryParams()}.
+            A confirmation email has been sent to <span id="email-display"></span>.
             Please open it and click the button inside to confirm your subscription.</p>
           <button id="dismiss-button" type=""
             class="w-[100%] bg-charcoal-grey text-white text-xs rounded-md p-3 font-bold hover:bg-gradient-to-r hover:from-pink-500 hover:to-tomato hover:shadow-xl hover:shadow-gray-300">Dismiss
