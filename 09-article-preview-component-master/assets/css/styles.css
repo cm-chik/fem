@@ -23,19 +23,6 @@
             
             height: 100%;
         }
-        .dialog::after {
-            content: "agbrwgrewegregre";
-            position: absolute;
-            width: 10;
-            height: 10;
-            border-style: solid;
-            background-color: yellow;
-            border-width: 0.625rem;
-            border-color: black black black black;
-            top: 100%;
-            left: 75%;
-        }
-
     }
     @media(hover:hover){
         .shareButton:hover img{
