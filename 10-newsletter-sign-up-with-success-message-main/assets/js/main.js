@@ -23,8 +23,8 @@ function handleSubmit(event) {
   const emailInput = document.getElementById("email-input");
   if (isValidEmailAddress(emailInput.value)) {
     console.log("Correct email format");
-    formDiv.classList.toggle("hidden");
-    successDiv.classList.toggle("hidden");
+    formDiv.classList.add("hidden");
+    successDiv.classList.remove("hidden");
     emailDisplay.textContent = emailInput.value;
   } else {
     console.log("Invalid email format");

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -20,59 +22,65 @@
             "Manrope": ["Manrope Plex Sans", "sans-serif"],
           },
           colors: {
-          "dark-slate-grey": "#1E1E78",
-          "charcoal-grey":"#3B3B4D",
-          "grey": "#B3B3B3",
-          "tomato":"#FF6347"
+            "dark-slate-grey": "#1E1E78",
+            "charcoal-grey": "#3B3B4D",
+            "grey": "#B3B3B3",
+            "tomato": "#FF6347"
           },
         },
       },
     };
   </script>
 </head>
-<body
-  class="font-Manrope md:grid justify-center flex-wrap h-screen bg-charcoal-grey max-md:bg-white  flex items-center">
-  <div class="md:border-2 max-w-[1080px] bg-white md:p-8 gap-8 rounded-xl md:grid md:grid-cols-[1fr,auto]">
+<body class="font-Manrope h-screen bg-charcoal-grey max-md:bg-white md:flex md:items-center md:justify-center">
+  <div
+    class="md:border-2 max-w-[1080px] bg-white md:p-8 rounded-3xl max-md:h-screen flex items-center align-middle justify-around">
     <!-- Sign-up form start -->
-        <div id="sign-up-form">
-          <picture class="md:order-2">
-            <source media="(min-width:768px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
-            <img src="./assets/images/illustration-sign-up-mobile.svg" style="width: 100%" class="">
-            </picture>
-            <div class="md:py-10 md:px-12 max-md:px-10">
-              <p class="md:text-center text-5xl font-bold py-8">Stay updated!</p>
-            <p>Join 60,000+ product managers receiving monthly updates on:</p>
-            <ul class="px-6 py-4 list-image-[url(./assets/images/icon-list.svg)] space-y-2 items-center ">
-              <li class="pl-4">Product discovery and building what matters</li>
-              <li class="pl-4">Measuring to ensure updates are a success</li>
-              <li class="pl-4">And much more!</li>
-            </ul>
-            <form id="newsletter-form">
-              <div class="flex justify-between items-center">
-                <label class="pt-2 text-xs font-bold">Email address</label>
-                <label id="errorMessage" class="hidden text-tomato">Valid email required</label>
-              </div>
-              <input required id="email-input"
-                class="w-[100%] cursor-pointer order-grey border-[1px] my-4 py-2 p-2.5 rounded-md placeholder-charcoal-gray invalid:border-pink-500"
-                placeholder="email@company.com"></input>
-              <button id="" type="submit"
-                class="w-[100%] disabled  bg-charcoal-grey text-white text-xs rounded-md p-3 font-bold hover:bg-gradient-to-r hover:from-pink-500 hover:to-tomato hover:shadow-xl hover:shadow-gray-300">
-                Subscribe
-                to monthly newsletter</button>
-            </form>
+    <div id="sign-up-form" class="w-screen  max-md:h-screen">
+      <div id="" class="md:flex">
+        <picture class="order-last">
+          <source media="(min-width:768px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
+          <img src="./assets/images/illustration-sign-up-mobile.svg" style="width: 100%" class="">
+        </picture>
+        <div class="px-12  py-14 flex flex-col justify-around">
+          <p class="md:text-center text-5xl font-bold py-8">Stay updated!</p>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul class="px-6 py-4 list-image-[url(./assets/images/icon-list.svg)] space-y-2 items-center ">
+            <li class="pl-4">Product discovery and building what matters</li>
+            <li class="pl-4">Measuring to ensure updates are a success</li>
+            <li class="pl-4">And much more!</li>
+          </ul>
+          <form id="newsletter-form">
+            <div class="flex justify-between items-center">
+              <label class="pt-2 text-xs font-bold">Email address</label>
+              <label id="errorMessage" class="hidden text-tomato">Valid email required</label>
             </div>
+            <input required id="email-input"
+              class="w-[100%] cursor-pointer order-grey border-[1px] my-4 py-2 p-2.5 rounded-md placeholder-charcoal-gray invalid:border-pink-500"
+              placeholder="email@company.com"></input>
+            <button id="" type="submit"
+              class="w-[100%] disabled  bg-charcoal-grey text-white text-xs rounded-md p-3 font-bold hover:bg-gradient-to-r hover:from-pink-500 hover:to-tomato hover:shadow-xl hover:shadow-gray-300">
+              Subscribe
+              to monthly newsletter</button>
+          </form>
         </div>
-        <div id="success-message" class="hidden max-w-[320px] bg-white md:p-8 gap-8 rounded-xl ">
+        </div>
+      </div>
+      <div id="success-message" class="hidden">
+        <div
+          class="max-w-[360px] max-md:h-[500px] bg-white p-4 gap-8 md:rounded-px flex flex-col justify-around align-middle">
           <img src="./assets/images/icon-success.svg" width="64" height="64">
-          <p class="text-5xl font-bold pt-8 py-2">Thanks for subscribing!</p>
-          <p class="py-4 text-">
-            A confirmation email has been sent to <span id="email-display"></span>.
+          <p class="text-5xl font-bold flex-wrap">Thanks for subscribing!</p>
+          <p class="">
+            A confirmation email has been sent to <span id="email-display" class="font-bold"></span>.
             Please open it and click the button inside to confirm your subscription.</p>
           <button id="dismiss-button" type=""
             class="w-[100%] bg-charcoal-grey text-white text-xs rounded-md p-3 font-bold hover:bg-gradient-to-r hover:from-pink-500 hover:to-tomato hover:shadow-xl hover:shadow-gray-300">Dismiss
             message</button>
-        </div>
+      </div>
+      </div>
   </div>
 </body>
 <script src="./assets/js/main.js"></script>
+
 </html>
