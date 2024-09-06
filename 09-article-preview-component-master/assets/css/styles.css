@@ -34,6 +34,10 @@
             top: 125%;
             left: 75%;
         }
-
     }
+    @media(hover:hover){
+        .shareButton:hover img{
+                filter: brightness(0) saturate(100%) invert(97%) sepia(0%) saturate(2385%) hue-rotate(70deg) brightness(116%) contrast(81%);
+            }
+        }
     }
