@@ -52,7 +52,7 @@
                 <label id="errorMessage" class="hidden text-tomato">Valid email required</label>
               </div>
               <input required id="email-input"
-                class="w-[100%] order-grey border-[1px] my-4 py-2 p-2.5 rounded-md placeholder-charcoal-gray invalid:border-pink-500"
+                class="w-[100%] cursor-pointer order-grey border-[1px] my-4 py-2 p-2.5 rounded-md placeholder-charcoal-gray invalid:border-pink-500"
                 placeholder="email@company.com"></input>
               <button id="" type="submit"
                 class="w-[100%] disabled  bg-charcoal-grey text-white text-xs rounded-md p-3 font-bold hover:bg-gradient-to-r hover:from-pink-500 hover:to-tomato hover:shadow-xl hover:shadow-gray-300">
@@ -67,7 +67,7 @@
           <p class="py-4 text-">
             A confirmation email has been sent to ${getQueryParams()}.
             Please open it and click the button inside to confirm your subscription.</p>
-          <button id="" type=""
+          <button id="dismiss-button" type=""
             class="w-[100%] bg-charcoal-grey text-white text-xs rounded-md p-3 font-bold hover:bg-gradient-to-r hover:from-pink-500 hover:to-tomato hover:shadow-xl hover:shadow-gray-300">Dismiss
             message</button>
         </div>
