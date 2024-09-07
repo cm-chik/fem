@@ -59,10 +59,10 @@
         <span id="username" class="text-5xl">Jermey Robson</span>
       </div>
     </div>
-    <div class="flex flex-col gap-4 p-10 text-pale-blue">
-      <p class=" hover:text-white cursor-pointer">Daily</p>
-      <p class=" hover:text-white cursor-pointer">Weekly</p>
-      <p class=" hover:text-white cursor-pointer">Monthly</p>
+    <div class="flex md:flex-col gap-4 p-10 text-pale-blue max-md:justify-between">
+      <button class=".frequencySelect hover:text-white cursor-pointer" data-option="daily">Daily</button>
+      <button class=".frequencySelect hover:text-white cursor-pointer" data-option="weekly">Weekly</button>
+      <button class=".frequencySelect hover:text-white cursor-pointer" data-option="monthly">Monthly</button>
     </div>
     </div>
     <div class="col-span-1 row-span-1 rounded-3xl relative">
@@ -75,7 +75,7 @@
         <div class="max-md:flex max-md:justify-between max-md:items-baseline">
           <span id="thisWeek" class="text-[3.5rem]"></span>
           <p>hrs</p>
-          <p>Last Week - <span id="lastWeek" class="text-pale-blue "></span>hrs</p>
+          <p><span id="timeFrame"></span> - <span id="lastWeek" class="text-pale-blue "></span>hrs</p>
         </div>
       </div>
     </div>
@@ -89,7 +89,7 @@
         <div class="max-md:flex max-md:justify-between max-md:items-baseline">
           <span id="thisWeek" class="text-[3.5rem]"></span>
           <p>hrs</p>
-          <p>Last Week - <span id="lastWeek" class="text-pale-blue "></span>hrs</p>
+          <p><span id="timeFrame"></span> - <span id="lastWeek" class="text-pale-blue "></span>hrs</p>
         </div>
       </div>
     </div>
@@ -104,7 +104,7 @@
         <div class="max-md:flex max-md:justify-between max-md:items-baseline">
           <span id="thisWeek" class="text-[3.5rem]"></span>
           <p>hrs</p>
-          <p>Last Week - <span id="lastWeek" class="text-pale-blue "></span>hrs</p>
+          <p><span id="timeFrame"></span> - <span id="lastWeek" class="text-pale-blue "></span>hrs</p>
         </div>
       </div>
     </div>
@@ -119,7 +119,7 @@
         <div class="max-md:flex max-md:justify-between max-md:items-baseline">
           <span id="thisWeek" class="text-[3.5rem]"></span>
           <p>hrs</p>
-          <p>Last Week - <span id="lastWeek" class="text-pale-blue "></span>hrs</p>
+          <p><span id="timeFrame"></span> - <span id="lastWeek" class="text-pale-blue "></span>hrs</p>
         </div>
       </div>
     </div>
@@ -134,7 +134,7 @@
         <div class="max-md:flex max-md:justify-between max-md:items-baseline">
           <span id="thisWeek" class="text-[3.5rem]"></span>
           <p>hrs</p>
-          <p>Last Week - <span id="lastWeek" class="text-pale-blue "></span>hrs</p>
+          <p><span id="timeFrame"></span> - <span id="lastWeek" class="text-pale-blue "></span>hrs</p>
         </div>
       </div>
     </div>
@@ -149,7 +149,7 @@
         <div class="max-md:flex max-md:justify-between max-md:items-baseline">
           <span id="thisWeek" class="text-[3.5rem]"></span>
           <p>hrs</p>
-          <p>Last Week - <span id="lastWeek" class="text-pale-blue "></span>hrs</p>
+          <p><span id="timeFrame"></span> - <span id="lastWeek" class="text-pale-blue "></span>hrs</p>
         </div>
       </div>
     </div>
