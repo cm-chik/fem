@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet" />
+
+  <script>tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            "Rubik": ["Rubik", "sans-serif"],
+          }
+          ,
+          colors: {
+            "blue": "#5C6BC0",
+            "light-red-work": "#FF6F61",
+            "soft-blue-play": "#4FC3F7",
+            "light-red-study": "#FF4C4C",
+            "lime-green-exercise": "#4CAF50",
+            "violet-social": "#7E57C2",
+            "soft-orange-self-care": "#FFB74D",
+            "very-dark-blue": "#1A1A2E",
+            "dark-blue": "#1E1E78",
+            "desaturated-blue": "#A7B2C1",
+            "pale-blue": "#E1F5FE"
+          }
+
+          ,
+        }
+
+        ,
+      }
+
+      ,
+    }
+
+      ;
+  </script>
+</head>
+
+<body class="grid grid-col-dense xl:grid-cols-4">
+  <div class="col-span-1 row-span-2 flex flex-col">
+    <div class="">Report for Jeremy Robson Daily</div>
+    <div class="">Daily Weekly Monthly </div>
+  </div>
+  <div class="col-span-1 row-span-1">Work</div>
+  <div class="col-span-1 row-span-1">Play</div>
+  <div class="col-span-1 row-span-1">Study</div>
+  <div class="col-span-1 row-span-1">Exercise</div>
+  <div class="col-span-1 row-span-1">Social</div>
+  <div class="col-span-1 row-span-1">Self Care</div>
+</body>
+
+</html>

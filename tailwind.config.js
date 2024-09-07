@@ -13,6 +13,7 @@ module.exports = {
         Barlow: ["Barlow Semi Condensed"],
         IBM: ["IBM Plex Sans"],
         Manrope: ["Manrope"],
+        Rubik: ["Rubik"],
       },
     },
   },
