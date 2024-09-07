@@ -34,7 +34,7 @@
 </head>
 <body class="font-Manrope h-screen bg-charcoal-grey max-md:bg-white md:flex md:items-center md:justify-center">
   <div
-    class="md:border-2 max-w-[1080px] bg-white md:p-8 rounded-3xl max-md:h-screen flex items-center align-middle justify-around">
+    class="md:border-2 max-w-[980px] bg-white md:py-6 md:pr-6 rounded-3xl max-md:h-screen flex items-center align-middle justify-around">
     <!-- Sign-up form start -->
     <div id="sign-up-form" class="w-screen  max-md:h-screen">
       <div id="" class="md:flex">
@@ -42,8 +42,8 @@
           <source media="(min-width:768px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
           <img src="./assets/images/illustration-sign-up-mobile.svg" style="width: 100%" class="">
         </picture>
-        <div class="px-12  py-14 flex flex-col justify-around">
-          <p class="md:text-center text-5xl font-bold py-8">Stay updated!</p>
+        <div class="px-20 py-14 flex flex-col justify-around">
+          <p class="md:text-center text-6xl font-bold py-8">Stay updated!</p>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
           <ul class="px-6 py-4 list-image-[url(./assets/images/icon-list.svg)] space-y-2 items-center ">
             <li class="pl-4">Product discovery and building what matters</li>
@@ -53,11 +53,11 @@
           <form id="newsletter-form">
             <div class="flex justify-between items-center">
               <label class="pt-2 text-xs font-bold">Email address</label>
-              <label id="errorMessage" class="hidden text-tomato">Valid email required</label>
+              <label id="errorMessage" class="hidden text-tomato text-xs font-bold">Valid email required</label>
             </div>
-            <input required id="email-input"
-              class="w-[100%] cursor-pointer border-[1px] my-4 py-2 p-2.5 rounded-md placeholder-charcoal-gray"
-              placeholder="email@company.com"></input>
+            <input id="email-input"
+              class="w-[100%] cursor-pointer border-[1px] my-4 py-2 p-2.5 rounded-md placeholder-charcoal-gray focus:invalid:bg-pink-600"
+              placeholder="email@company.com" pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}"></input>
             <button id="" type="submit"
               class="w-[100%] disabled  bg-charcoal-grey text-white text-xs rounded-md p-3 font-bold hover:bg-gradient-to-r hover:from-pink-500 hover:to-tomato hover:shadow-xl hover:shadow-gray-300">
               Subscribe

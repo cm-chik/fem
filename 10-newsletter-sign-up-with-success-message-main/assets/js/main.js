@@ -29,6 +29,8 @@ function handleSubmit(event) {
   } else {
     console.log("Invalid email format");
     errorMessage.classList.remove("hidden");
+    emailInput.classList.add("border-tomato", "bg-red-100", "text-tomato");
+    
   }
 }
 
