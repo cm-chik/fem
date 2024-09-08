@@ -20,30 +20,21 @@ function renderCards(option) {
         activityTitle = activity.title.toLowerCase().replace(" ", "-");
         cards.forEach((card) => {
           if (card.classList.contains(activityTitle + "-card")) {
-            console.log(card);
+            cardTitle = card.querySelector(".card-type");
+            currentNumber = card.querySelector(".currentNumber");
+            previousNumber = card.querySelector(".previousNumber");
+            cardMeasurement = card.querySelector(".timeframeName");
+            current = activity["timeframes"][option]["current"];
+            previous = activity["timeframes"][option]["previous"];
+
+            cardTitle.textContent = activity.title;
+            currentNumber.textContent = current;
+            previousNumber.textContent = previous;
+            cardMeasurement.textContent = timeframeName;
           }
         });
       });
     });
-
-  activityData.then(
-    () => console.log(activityData)
-    // activityData.forEach((actData) => {
-    //   console.log(actData);
-    //   title = actData[title];
-    //cards.forEach((card, index) => {
-    //const activity =
-    // if (card.classList.contains(activity+'-card')){
-    // // Use querySelectorAll on the individual card
-    // thisTimeFrameData.forEach((dataElement) => {
-    //   const timeframeWord = dataElement.textContent; // Get the text content
-    //   // Assuming you want to update the text content of each dataElement
-    //   dataElement.textContent = timeframeWord; // Update or log as needed
-    // } else if () { }
-    //});
-    //});
-    //})
-  );
 }
 const getTimeFrameName = (option) => {
   if (option === "daily") {
@@ -54,12 +45,10 @@ const getTimeFrameName = (option) => {
     return "Last month";
   }
 };
-
+renderCards("daily");
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
     const ClickedOption = button.dataset.option;
     renderCards(ClickedOption);
   });
 });
-
-renderCards("daily");
