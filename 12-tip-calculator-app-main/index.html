@@ -29,6 +29,7 @@
             "grayish-cyan": "#4b7579",
             "light-grayish-cyan": "#b7d3d5",
             "very-light-grayish-cyan": "#e7f4f5",
+            "strong-cyan": "#26c0ab",
           }
 
           ,
@@ -44,35 +45,39 @@
   </script>
 </head>
 
-<body class="bg-light-grayish-cyan font-spaceMono text-very-dark-cyan flex h-screen justify-center">
-  <div class="sm:p-8 flex flex-col items-center sm:justify-center">
+<body class="bg-light-grayish-cyan font-spaceMono text-sm text-grayish-cyan flex h-screen justify-center ">
+  <div class="flex flex-col items-center sm:justify-center">
     <img src="./images/logo.svg" class="py-8" width="80" height="80">
     <div
-      class="flex max-sm:flex-col p-8 bg-white sm:rounded-2xl max-sm:rounded-t-2xl items-center sm:justify-center max-sm:h-full">
-      <div class="flex flex-col p-8">
+      class="w-screen max-w-[780px] flex max-sm:flex-col sm:space-x-8 max-sm:space-y-8 p-6 bg-white sm:rounded-2xl max-sm:rounded-t-2xl items-center sm:justify-between ">
+      <div class="flex flex-col w-[100%] gap-y-2 px-4">
         <input form="">
         Bill
-        <input class="bg-very-light-grayish-cyan">
+        <input class="bg-very-light-grayish-cyan p-2">
         Select Tip %
-        <div>
-          <button class="bg-very-dark-cyan text-white rounded-md">5%</button>
-          <button class="bg-very-dark-cyan text-white rounded-md">10%</button>
-          <button class="bg-very-dark-cyan text-white rounded-md">15%</button>
-          <button class="bg-very-dark-cyan text-white rounded-md">25%</button>
-          <button class="bg-very-dark-cyan text-white rounded-md">50%</button>
-          <button class="bg-very-light- text-very-dark-cyan rounded-md">Custom</button>
+        <div class="grid grid-cols-3 grid-rows-2 gap-2">
+          <button class="bg-very-dark-cyan text-white rounded-md py-2  text-xl">5%</button>
+          <button class="bg-very-dark-cyan text-white rounded-md py-2  text-xl">10%</button>
+          <button class="bg-very-dark-cyan text-white rounded-md py-2  text-xl">15%</button>
+          <button class="bg-very-dark-cyan text-white rounded-md py-2  text-xl">25%</button>
+          <button class="bg-very-dark-cyan text-white rounded-md py-2  text-xl">50%</button>
+          <button class="bg-very-light-grayish-cyan text-grayish-cyan rounded-md">Custom</button>
         </div>
         Number of People
-        <input class="bg-very-light-grayish-cyan">
-      </div>
-      Tip Amount
-      / person
-
-      Total
-      / person
-
-      Reset
-
+        <input class="bg-very-light-grayish-cyan p-2">
+        </div>
+        <div class="bg-very-dark-cyan text-very-light-grayish-cyan rounded-xl p-6 w-[100%] text-xs flex flex-col space-y-10">
+          <div class="grid grid-cols-2">
+            <p class="col-start-1 grid-rows-1 col-span-1 row-span-1">Tip Amount</p>
+            <p class="col-start-1 grid-rows-1 col-span-1 row-span-1 text-light-grayish-cyan">/ person</p>
+            <span class="col-start-2 grid-row-2 text-3xl text-strong-cyan">$4.27</p>
+          </div>
+          <div class="grid grid-flow-col grid-rows-2 grid-cols-2">
+            <p class="grid-rows-1 grid-cols-1">Total</p>
+            <p class="grid-rows-1 grid-cols-1 text-light-grayish-cyan">/ person</p>
+            <span class="grid-rows-2 grid-cols-1 text-3xl text-strong-cyan">$4.27</p>
+          </div>
+          <button class="bg-strong-cyan text-dark-grayish-cyan rounded-md uppercase p-4">Reset</button>
     </div>
   </div>
   </div>
