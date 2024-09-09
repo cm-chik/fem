@@ -14,6 +14,7 @@ module.exports = {
         IBM: ["IBM Plex Sans"],
         Manrope: ["Manrope"],
         Rubik: ["Rubik"],
+        spaceMono: ["Space Mono"],
       },
     },
   },
