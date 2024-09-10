@@ -12,18 +12,28 @@ peopleErrorMsg = document.querySelector(".peopleErrorMsg");
 selectedTipPercentage = 0;
 
 billAmount.addEventListener("keyup", () => {
-  if (!billAmount.value.match(/^[0-9]+$/)) {
+  resetButton.disabled = false;
+  if (!billAmount.value.trim().length) {
+    billErrorMsg.classList.add("hidden");
+    resetButton.disabled = true;
+  } else if (!billAmount.value.match(/^[0-9]+$/)) {
+    console.log("h1");
     billErrorMsg.textContent = "Please input a vaild number";
     billErrorMsg.classList.remove("hidden");
     resetExceptInput();
   } else {
+    console.log("h2");
     billErrorMsg.classList.add("hidden");
     evaluate(selectedTipPercentage);
   }
 });
 
 peopleCount.addEventListener("keyup", () => {
-  if (!peopleCount.value.match(/^[0-9]+$/)) {
+  resetButton.disabled = false;
+  if (!peopleCount.value.trim().length) {
+    peopleErrorMsg.classList.add("hidden");
+    resetButton.disabled = true;
+  } else if (!peopleCount.value.match(/^[0-9]+$/)) {
     peopleErrorMsg.textContent = "Please input a vaild number";
     peopleErrorMsg.classList.remove("hidden");
     resetExceptInput();
@@ -39,20 +49,26 @@ peopleCount.addEventListener("keyup", () => {
 });
 
 customTipPercentage.addEventListener("keyup", () => {
+  resetButton.disabled = false;
   if (!customTipPercentage.value.match(/^[0-9]+$/)) {
     CustomTipErrorMsg.textContent = "Please input a valid number";
     CustomTipErrorMsg.classList.remove("hidden");
   } else {
-    selectedTipPercentage = customTipPercentage.value;
-    evaluate(customTipPercentage.value / 100);
+    selectedTipPercentage = parseFloat(customTipPercentage.value / 100);
     CustomTipErrorMsg.classList.add("hidden");
+    if (!peopleCount.value == "0" && !billAmount.value == "0") {
+      evaluate();
+    }
   }
 });
 
 tipButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    selectedTipPercentage = button.value;
-    evaluate(button.value);
+    customTipPercentage.value = "";
+    if (!peopleCount.value == "0" && !billAmount.value == "0") {
+      selectedTipPercentage = parseFloat(button.value);
+      evaluate(button.value);
+    }
   });
 });
 
@@ -67,7 +83,7 @@ function evaluate() {
     peopleCount.value
   ).toFixed(2);
   totalPricePerPerson.textContent = (
-    (selectedTipPercentage * (1 + billAmount.value)) /
+    ((1 + selectedTipPercentage) * billAmount.value) /
     peopleCount.value
   ).toFixed(2);
 }
@@ -81,6 +97,7 @@ function resetEverything() {
   billErrorMsg.classList.add("hidden");
   peopleErrorMsg.classList.add("hidden");
   CustomTipErrorMsg.classList.add("hidden");
+  resetButton.disabled = true;
 }
 
 function resetExceptInput() {
