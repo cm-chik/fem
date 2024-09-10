@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './11-time-tracking-dashboard-main'
+          path: './12-tip-calculator-app-main'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
