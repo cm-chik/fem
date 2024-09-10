@@ -50,10 +50,10 @@
     <img src="./images/logo.svg" class="py-8" width="80" height="80">
     
     <div
-      class="w-screen max-w-[780px] flex max-sm:flex-col sm:space-x-8 max-sm:space-y-8 p-6 bg-white rounded-2xl items-center sm:justify-between ">
+      class="w-screen max-w-[880px] flex max-sm:flex-col sm:space-x-8 max-sm:space-y-8 p-6 bg-white rounded-2xl items-center sm:justify-between ">
       <div class="flex flex-col w-[100%] px-4">
         <div class="flex justify-between">Bill
-          <p class="bill-error-msg | text-xs text-red-500 hidden">Please enter a valid number</p>
+          <p class="billErrorMsg | text-xs text-red-500 hidden">Error</p>
         </div>
         <div class="flex justify-end items-center relative pb-4 pt-2">
           <input
@@ -61,8 +61,10 @@
             placeholder="0">
           <img src="./images/icon-dollar.svg" height="8px" width="8px" class="absolute mr-2 left-2">
         </div>
-
+        <div class="flex justify-between">
         Select Tip %
+        <p class="CustomTipErrorMsg | text-xs text-red-500 hidden">Error</p>
+        </div>
         <div class="grid grid-cols-3 grid-rows-2 gap-3 pb-4 pt-2">
           <button
             class="tipsButton | bg-very-dark-cyan text-white rounded-md py-2 text-xl focus:bg-strong-cyan focus:text-very-dark-cyan" value="0.05">5%</button>
@@ -78,11 +80,12 @@
             class="customTipPercentage | bg-very-light-grayish-cyan placeholder-dark-grayish-cyan text-very-dark-cyan text-right  px-4 rounded-md invalid:border-red-500 border-2 hover:border-strong-cyan hover:cursor-pointer"
             placeholder="Custom"></button>
         </div>
-        
+        <div class="flex justify-between">
         Number of People
+        <p class="peopleErrorMsg | text-xs text-red-500 hidden">Error</p>
+        </div>
         <div class="flex justify-end items-center relative pt-2">
-          <p class="people-error-msg | text-xs text-red-500 hidden">Can't be zero</p>
-          <input
+        <input
             class="peopleCount | w-full bg-very-light-grayish-cyan rounded-sm text-right py-1 p-5 invalid:border-red-500 border-2 hover:border-strong-cyan  text-very-dark-cyan"
             placeholder="0">
           <img src="./images/icon-person.svg" height="8px" width="8px" class="absolute mr-2 left-2">
@@ -91,13 +94,13 @@
         <div class="bg-very-dark-cyan text-very-light-grayish-cyan rounded-xl p-10 w-full text-xs flex flex-col space-y-10">
           <div class="flex justify-between">
             <p class="">Tip Amount<br>
-              <span class=" text-grayish-cyan">/ person</span>
+              <span class="text-grayish-cyan">/ person</span>
             </p>
             <span class="tipPricePerPerson | text-3xl text-strong-cyan">$0.00</p>
           </div>
           <div class="flex justify-between">
             <p class="">Total<br>
-              <span class=" text-grayish-cyan">/ person</span>
+              <span class="text-grayish-cyan">/ person</span>
             </p>
             <span class="totalPricePerPerson | text-3xl text-strong-cyan">$0.00</p>
           </div>
