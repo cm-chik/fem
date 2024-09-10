@@ -1,16 +1,26 @@
-const billAmount = document.querySelector(".billAmount");
-const peopleCount = document.querySelector(".peopleCount");
-const tipButtons = document.querySelectorAll(".tipsButton");
-const customTipPercentage = document.querySelector(".customTipPercentage");
-const tipPricePerPerson = document.querySelector(".tipPricePerPerson");
-const totalPricePerPerson = document.querySelector(".totalPricePerPerson");
-const resetButton = document.querySelector(".resetButton");
+billAmount = document.querySelector(".billAmount");
+peopleCount = document.querySelector(".peopleCount");
+tipButtons = document.querySelectorAll(".tipsButton");
+customTipPercentage = document.querySelector(".customTipPercentage");
+tipPricePerPerson = document.querySelector(".tipPricePerPerson");
+totalPricePerPerson = document.querySelector(".totalPricePerPerson");
+resetButton = document.querySelector(".resetButton");
 
-tipButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    tipPricePerPerson.textContent =
-      (button.value * billAmount.value) / peopleCount;
-    totalPricePerPerson.textContent =
-      (button.value * (1 + billAmount.value)) / peopleCount;
+billAmount.addEventListener("keyup", evaluate);
+peopleCount.addEventListener("keyup", evaluate);
+
+function evaluate() {
+  tipButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      tipPricePerPerson.textContent =
+        (button.value * billAmount.value) / peopleCount;
+      totalPricePerPerson.textContent =
+        (button.value * (1 + billAmount.value)) / peopleCount;
+    });
   });
-});
+}
+
+//check bill 
+//check number of people
+//check tip
+//reset
