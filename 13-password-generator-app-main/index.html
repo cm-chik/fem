@@ -56,18 +56,22 @@
         <label>Character Length</label>
         <span class="passwordLength | text-sharp-green text-2xl">10</span>
       </div>
-      <!--slider-->
-      <div class="flex justify-start space-x-2"><input type="checkbox" id="includeUpper"><label>Include Uppercase Letters</label></div>
-      <div class="flex justify-start space-x-2"><input type="checkbox" id="includeLower"><label>Include Lowercase Letters</label></div>
-      <div class="flex justify-start space-x-2"><input type="checkbox" id="includeNumbers"><label>Include Numbers</label></div>
-      <div class="flex justify-start space-x-2"><input type="checkbox" id="includeSymbols"><label>Include Symbols</label></div>
+      <input id="lengthSlider" type="range" min="1" max="20" class="w-full h-2 rounded-lg appearance-auto cursor-pointer accent-sharp-green">
+
+      <div class="flex justify-start items-center space-x-2"><input type="checkbox" class="accent-sharp-green appearance-auto border-white" id="includeUpper"><label>Include Uppercase Letters</label></div>
+      <div class="flex justify-start space-x-2"><input type="checkbox" class="accent-sharp-green" id="includeLower"><label>Include Lowercase Letters</label></div>
+      <div class="flex justify-start space-x-2"><input type="checkbox" class="accent-sharp-green" id="includeNumbers"><label>Include Numbers</label></div>
+      <div class="flex justify-start space-x-2"><input type="checkbox" class="accent-sharp-green" id="includeSymbols"><label>Include Symbols</label></div>
     
 
      <div class="flex bg-black justify-between px-10 py-2">
           <p class="text-light-gray">STRENGTH</p>
           <span id="passwordLevel">LEVEL</span>
         </div>
-      <button class="generatePassword | bg-sharp-green text-black p-4"> GENERATE</button>
+
+      <button class="generatePassword | bg-sharp-green text-black p-4">    <div class="flex items-center bg-sharp-green justify-center space-x-2"><p>GENERATE</p><img src="./assets/images/icon-arrow-right.svg"></div></button>
+      
+    </div>
       </div>
     </div>
   </body>
