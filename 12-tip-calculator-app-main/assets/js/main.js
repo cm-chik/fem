@@ -20,7 +20,7 @@ billAmount.addEventListener("keyup", () => {
     console.log("h1");
     billErrorMsg.textContent = "Please input a vaild number";
     billErrorMsg.classList.remove("hidden");
-    resetExceptInput();
+    resetResult();
   } else {
     console.log("h2");
     billErrorMsg.classList.add("hidden");
@@ -36,11 +36,11 @@ peopleCount.addEventListener("keyup", () => {
   } else if (!peopleCount.value.match(/^[0-9]+$/)) {
     peopleErrorMsg.textContent = "Please input a vaild number";
     peopleErrorMsg.classList.remove("hidden");
-    resetExceptInput();
+    resetResult();
   } else if (peopleCount.value == 0) {
     peopleErrorMsg.textContent = "Cannot be zero";
     peopleErrorMsg.classList.remove("hidden");
-    resetExceptInput();
+    resetResult();
   } else {
     console.log(peopleCount.value);
     peopleErrorMsg.classList.add("hidden");
@@ -100,7 +100,7 @@ function resetEverything() {
   resetButton.disabled = true;
 }
 
-function resetExceptInput() {
+function resetResult() {
   tipPricePerPerson.textContent = "$0.00";
   totalPricePerPerson.textContent = "$0.00";
 }
