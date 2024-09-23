@@ -1,4 +1,4 @@
-export default function Home() {
+const HomePage = () => {
   return (
     <div className=" bg-deep-gray flex flex-col items-center justify-center bg-black font-spaceMono space-y-5">
       <div className="text-light-gray ">Password Generator</div>
@@ -9,7 +9,7 @@ export default function Home() {
           <img src="/images/icon-copy.svg " width={20} height={20} alt="" />
         </div>
       </div>
-      <div className="  bg-dark-gray font-Outfit text-white flex flex-col justify-normal p-6 space-y-4">
+      <div className="w-[500px] bg-dark-gray font-Outfit text-white flex flex-col justify-normal p-6 space-y-4">
         <div className="flex justify-between">
           <label>Character Length</label>
           <span className="passwordLength | text-sharp-green text-2xl">10</span>
@@ -73,4 +73,5 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+export default HomePage;
