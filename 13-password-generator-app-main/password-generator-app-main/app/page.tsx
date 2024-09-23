@@ -17,8 +17,8 @@ export default function Home() {
         <input
           id="lengthSlider"
           type="range"
-          min="1"
-          max="20"
+          min="5"
+          max="30"
           className="w-full h-2 rounded-lg appearance-auto cursor-pointer accent-sharp-green"
         />
 
