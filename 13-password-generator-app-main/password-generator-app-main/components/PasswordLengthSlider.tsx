@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const CharacterLength = () => {
+const PasswordLengthSlider = () => {
   const [charLength, setCharLength] = useState(10);
   const handleLengthChange = (e: React.FormEvent<HTMLInputElement>) => {
     setCharLength(e.currentTarget.valueAsNumber);
@@ -29,4 +29,4 @@ const CharacterLength = () => {
   );
 };
 
-export default CharacterLength;
+export default PasswordLengthSlider;

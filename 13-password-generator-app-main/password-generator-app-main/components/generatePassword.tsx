@@ -1,7 +1,12 @@
-const GeneratePassword = () => {
+"use client";
+const PasswordGeneratorButton = () => {
+  const generatePassword = () => {};
   return (
     <div>
-      <button className="w-[100%] max-w-[500px] generatePassword | bg-sharp-green text-black p-4">
+      <button
+        className="w-[100%] max-w-[500px] generatePassword | bg-sharp-green text-black p-4 "
+        onClick={generatePassword}
+      >
         <div className="flex items-center bg-sharp-green justify-center space-x-2">
           <p>GENERATE</p>
           <img
@@ -15,5 +20,4 @@ const GeneratePassword = () => {
     </div>
   );
 };
-
-export default GeneratePassword;
+export default PasswordGeneratorButton;
