@@ -1,11 +1,10 @@
 "use client";
 
-import PasswordOptions from "@/components/PasswordOptions";
+import PasswordOptions from "@/components/PasswordOptions"; // Corrected casing
 import PasswordLengthSlider from "../components/passwordLengthSlider";
-import GeneratePassword from "@/components/generatePassword";
-import PasswordDisplay from "@/components/PasswordDisplay";
-import PasswordStrength from "@/components/PasswordStrength";
 import PasswordGeneratorButton from "@/components/PasswordGeneratorButton";
+import PasswordDisplay from "@/components/PasswordDisplay";
+import PasswordStrength from "@/components/passwordStrength";
 import { useState } from "react";
 
 const HomePage = () => {
@@ -18,7 +17,7 @@ const HomePage = () => {
         <PasswordLengthSlider />
         <PasswordGeneratorButton />
         <PasswordStrength />
-        <GeneratePassword />
+        <PasswordOptions />
       </div>
     </div>
   );

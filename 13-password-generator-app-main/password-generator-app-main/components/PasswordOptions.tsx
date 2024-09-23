@@ -6,7 +6,7 @@ interface PasswordOptionProps {
   setPasswordCombination: (combination: string) => void;
 }
 
-const PasswordOption: React.FC<PasswordOptionProps> = ({
+const PasswordOptions: React.FC<PasswordOptionProps> = ({
   passwordCombination,
   setPasswordCombination,
 }) => {
@@ -97,4 +97,4 @@ const PasswordOption: React.FC<PasswordOptionProps> = ({
   );
 };
 
-export default PasswordOption;
+export default PasswordOptions;
