@@ -1,23 +1,14 @@
 "use client";
-import { useState, useEffect } from "react";
 
-interface PasswordOptionProps {
-  passwordCombination: string;
-  setPasswordCombination: (combination: string) => void;
-}
-
-const PasswordOptions: React.FC<PasswordOptionProps> = ({
-  passwordCombination,
-  setPasswordCombination,
-}) => {
+const PasswordOptions = () => {
   const handleUpperCases = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.checked) {
       setPasswordCombination(
-        passwordCombination + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        setPasswordCombination + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
       );
     } else {
       setPasswordCombination(
-        passwordCombination.replace("ABCDEFGHIJKLMNOPQRSTUVWXYZ", "")
+        setPasswordCombination.replace("ABCDEFGHIJKLMNOPQRSTUVWXYZ", "")
       );
     }
   };
@@ -25,35 +16,33 @@ const PasswordOptions: React.FC<PasswordOptionProps> = ({
   const handleLowerCases = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.checked) {
       setPasswordCombination(
-        passwordCombination + "abcdefghijklmnopqrstuvwxyz"
+        setPasswordCombination + "abcdefghijklmnopqrstuvwxyz"
       );
     } else {
       setPasswordCombination(
-        passwordCombination.replace("abcdefghijklmnopqrstuvwxyz", "")
+        setPasswordCombination.replace("abcdefghijklmnopqrstuvwxyz", "")
       );
     }
   };
 
   const handleNumbers = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.checked) {
-      setPasswordCombination(passwordCombination + "1234567890");
+      setPasswordCombination(setPasswordCombination + "1234567890");
     } else {
-      setPasswordCombination(passwordCombination.replace("1234567890", ""));
+      setPasswordCombination(setPasswordCombination.replace("1234567890", ""));
     }
   };
   const handleSymbols = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.checked) {
-      setPasswordCombination(passwordCombination + "!@#$%^&*()_+{}[]:;<>,.?/~");
+      setPasswordCombination(
+        setPasswordCombination + "!@#$%^&*()_+{}[]:;<>,.?/~"
+      );
     } else {
       setPasswordCombination(
-        passwordCombination.replace("!@#$%^&*()_+{}[]:;<>,.?/~", "")
+        setPasswordCombination.replace("!@#$%^&*()_+{}[]:;<>,.?/~", "")
       );
     }
   };
-
-  useEffect(() => {
-    console.log("Current passwordCombination: ", passwordCombination);
-  }, [passwordCombination]); // Log whenever passwordCombination changes
 
   return (
     <div className="space-y-4">
@@ -98,3 +87,6 @@ const PasswordOptions: React.FC<PasswordOptionProps> = ({
 };
 
 export default PasswordOptions;
+function setPasswordCombination(arg0: string) {
+  throw new Error("Function not implemented.");
+}
