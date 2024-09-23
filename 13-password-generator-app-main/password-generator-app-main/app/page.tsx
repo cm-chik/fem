@@ -1,15 +1,15 @@
 const HomePage = () => {
   return (
-    <div className=" bg-deep-gray flex flex-col items-center justify-center bg-black font-spaceMono space-y-5">
-      <div className="text-light-gray ">Password Generator</div>
-      <div className=" bg-dark-gray font-Outfit text-white flex items-center justify-between p-4">
+    <div className="bg-deep-gray flex flex-wrap flex-col items-center justify-center bg-black font-spaceMono space-y-5">
+      <div className="text-light-gray pt-10">Password Generator</div>
+      <div className="w-[100%] max-w-[500px] bg-dark-gray font-Outfit text-white flex items-center justify-between p-4">
         <p className="text-xl"> LYpYTMIafZ</p>
         <div className="flex space-x-2">
           <p className="text-sharp-green">COPIED</p>
           <img src="/images/icon-copy.svg " width={20} height={20} alt="" />
         </div>
       </div>
-      <div className="w-[500px] bg-dark-gray font-Outfit text-white flex flex-col justify-normal p-6 space-y-4">
+      <div className="w-[100%] max-w-[500px] bg-dark-gray font-Outfit text-white flex flex-col justify-normal p-6 space-y-4">
         <div className="flex justify-between">
           <label>Character Length</label>
           <span className="passwordLength | text-sharp-green text-2xl">10</span>

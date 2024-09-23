@@ -18,7 +18,7 @@ const config: Config = {
         IBM: ["IBM Plex Sans"],
         Manrope: ["Manrope"],
         Rubik: ["Rubik"],
-        spaceMono: ["Space Mono", "sans-serif"],
+        spaceMono: ["var(--font-space-mono)"],
       },
       colors: {
         "sharp-green": "#b1f2b5",

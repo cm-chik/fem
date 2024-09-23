@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Space_Mono } from "next/font/google";
 
 const SpaceMono = Space_Mono({
-  weight: "700",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-space-mono",
 });
 import "./globals.css";
 
@@ -18,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={SpaceMono.className}>{children}</body>
+      <body className={`${SpaceMono.variable}`}>{children}</body>
     </html>
   );
 }
