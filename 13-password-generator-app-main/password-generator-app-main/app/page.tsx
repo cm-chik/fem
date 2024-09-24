@@ -13,12 +13,12 @@ const HomePage = () => {
     } else navigator.clipboard.writeText("");
   }
   return (
-    <div className="bg-deep-gray flex flex-wrap flex-col items-center justify-center bg-black font-spaceMono space-y-5 px-4">
+    <div className="bg-deep-gray flex flex-wrap flex-col items-center justify-center bg-black font-spaceMono space-y-5">
       <div className="text-light-gray pt-10">Password Generator</div>
-      <div className="w-[100%] max-w-[500px] bg-dark-gray font-Outfit text-white flex items-center justify-between p-4">
+      <div className=" bg-dark-gray font-Outfit text-white flex items-center justify-between p-4">
         <input
           className="text-xl bg-dark-gray"
-          placeholder="Click Generate to create a password"
+          placeholder="Click Generate"
           disabled
           value={password}
         ></input>
@@ -27,7 +27,7 @@ const HomePage = () => {
           <IconCopy />
         </button>
       </div>
-      <PasswordOptions />
+      <PasswordOptions setPassword={setPassword} />
     </div>
   );
 };

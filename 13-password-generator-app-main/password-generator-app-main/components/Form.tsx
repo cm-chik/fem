@@ -1,9 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import IconArrowRight from "./IconArrowRight";
+import React, { SetStateAction, useEffect, useState } from "react";
 
-const PasswordOptions = () => {
+export default function Form({
+  setPassword,
+}: {
+  setPassword: (password: string) => void;
+}) {
   const [charLength, setCharLength] = useState(10);
   const handleLengthChange = (e: React.FormEvent<HTMLInputElement>) => {
     setCharLength(e.currentTarget.valueAsNumber);
@@ -49,13 +53,17 @@ const PasswordOptions = () => {
       );
     }
   };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(PasswordCombination);
+    setPassword(PasswordCombination);
   };
   return (
-    <div className="w-[100%] max-w-[500px] bg-dark-gray font-Outfit text-white flex flex-col justify-normal p-6 space-y-4">
-      <form onSubmit={handleSubmit}>
+    <div>
+      <form
+        onSubmit={handleSubmit}
+        className=" bg-dark-gray font-Outfit text-white flex flex-col justify-normal p-5 space-y-4"
+      >
         <div className="flex justify-between">
           <label>Character Length</label>
           <span className="passwordLength | text-sharp-green text-2xl">
@@ -124,5 +132,3 @@ const PasswordOptions = () => {
     </div>
   );
 };
-
-export default PasswordOptions;
