@@ -1,6 +1,9 @@
 "use client";
 import IconHtml from "@/public/icon-html.svg";
-
+import IconCSS from "@/public/icon-css.svg";
+import IconJavaScript from "@/public/icon-js.svg";
+import IconAccessibility from "@/public/icon-accessibility.svg";
+import startQuiz from "./startQuiz";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -21,11 +24,17 @@ export default function Home() {
     }
   };
 
+  async function getTitles() {
+    return fetch("/data.json")
+      .then((res) => res.json())
+      .then((data) => data.subjects);
+  }
+
   const subjects = [
-    { id: 1, name: "HTML", icon: { IconHtml } },
-    { id: 1 },
-    { id: 1 },
-    { id: 1 },
+    { id: "HTML", name: "HTML", icon: IconHtml },
+    { id: "CSS", name: "CSS", icon: IconCSS },
+    { id: "JavaScript", name: "JavaScript", icon: IconJavaScript },
+    { id: "Accessibility", name: "Accessibility", icon: IconAccessibility },
   ];
 
   return (
@@ -36,9 +45,17 @@ export default function Home() {
           Welcome to the <b>Frontend Quiz!</b>
           <p className="text-xs italic">Pick a subject to get started.</p>
         </div>
-        <div className="flex items-center">
-          <IconHtml />
-          HTML
+        <div className="">
+          {subjects.map((subject) => (
+            <button
+              key={subject.id}
+              className="flex items-center"
+              onClick={() => startQuiz(subject.id)}
+            >
+              <subject.icon />
+              {subject.name}
+            </button>
+          ))}
         </div>
       </div>
     </div>
