@@ -6,7 +6,6 @@ import IconCopy from "@/components/IconCopy";
 
 const HomePage = () => {
   const [password, setPassword] = useState("");
-
   function copyPassword() {
     if (password) {
       navigator.clipboard.writeText(password);
@@ -18,7 +17,7 @@ const HomePage = () => {
       <div className=" bg-dark-gray font-Outfit text-white flex items-center justify-between p-4">
         <input
           className="text-xl bg-dark-gray"
-          placeholder="Click Generate"
+          placeholder="Select options"
           disabled
           value={password}
         ></input>

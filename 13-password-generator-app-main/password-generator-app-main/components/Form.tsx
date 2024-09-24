@@ -68,13 +68,15 @@ export default function Form({
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     let password = "";
-    for (let i = 0; i < charLength; i++) {
-      const randomNumber = Math.floor(
-        Math.random() * PasswordCombination.length
-      );
-      password += PasswordCombination[randomNumber];
+    if (PasswordCombination !== "") {
+      for (let i = 0; i < charLength; i++) {
+        const randomNumber = Math.floor(
+          Math.random() * PasswordCombination.length
+        );
+        password += PasswordCombination[randomNumber];
+      }
+      setPassword(password);
     }
-    setPassword(password);
   };
 
   return (
@@ -140,9 +142,10 @@ export default function Form({
         </div>
         <button
           type="submit"
-          className="w-[100%] max-w-[500px] generatePassword | bg-sharp-green text-black p-4 "
+          disabled={PasswordCombination === ""}
+          className="group disabled:bg-gray-500 w-[100%] max-w-[500px] generatePassword | bg-sharp-green text-black p-4 "
         >
-          <div className="flex items-center bg-sharp-green justify-center space-x-2">
+          <div className="group-disabled:bg-gray-500 flex items-center bg-sharp-green justify-center space-x-2 ">
             <p>GENERATE</p>
             <IconArrowRight />
           </div>
