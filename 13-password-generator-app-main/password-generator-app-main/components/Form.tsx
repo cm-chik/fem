@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import IconArrowRight from "./IconArrowRight";
+
 const PasswordOptions = () => {
   const [charLength, setCharLength] = useState(10);
   const handleLengthChange = (e: React.FormEvent<HTMLInputElement>) => {
@@ -48,78 +49,80 @@ const PasswordOptions = () => {
       );
     }
   };
-
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(PasswordCombination);
+  };
   return (
     <div className="w-[100%] max-w-[500px] bg-dark-gray font-Outfit text-white flex flex-col justify-normal p-6 space-y-4">
-      <div className="flex justify-between">
-        <label>Character Length</label>
-        <span className="passwordLength | text-sharp-green text-2xl">
-          {charLength}
-        </span>
-      </div>
-      <input
-        id="lengthSlider"
-        type="range"
-        min="5"
-        max="30"
-        value={charLength}
-        onChange={handleLengthChange}
-        className="w-full h-2 rounded-lg appearance-auto cursor-pointer accent-sharp-green"
-      />
-      <div className="flex justify-start items-center space-x-2 ">
-        <input
-          type="checkbox"
-          className="accent-sharp-green appearance-auto border-white"
-          id="includeUpper"
-          onChange={handleUpperCases}
-        />
-        <label>Include Uppercase Letters</label>
-      </div>
-      <div className="flex justify-start space-x-2">
-        <input
-          type="checkbox"
-          className="accent-sharp-green"
-          id="includeLower"
-          onChange={handleLowerCases}
-        />
-        <label>Include Lowercase Letters</label>
-      </div>
-      <div className="flex justify-start space-x-2">
-        <input
-          type="checkbox"
-          className="accent-sharp-green"
-          id="includeNumbers"
-          onChange={handleNumbers}
-        />
-        <label>Include Numbers</label>
-      </div>
-      <div className="flex justify-start space-x-2">
-        <input
-          type="checkbox"
-          className="accent-sharp-green"
-          id="includeSymbols"
-          onChange={handleSymbols}
-        />
-        <label>Include Symbols</label>
-      </div>
-      <div className="flex bg-black justify-between px-10 py-2">
-        <p className="text-light-gray">STRENGTH</p>
-        <span id="passwordLevel">LEVEL</span>
-      </div>
-      <button
-        className="w-[100%] max-w-[500px] generatePassword | bg-sharp-green text-black p-4 "
-        //onClick={}
-      >
-        <div className="flex items-center bg-sharp-green justify-center space-x-2">
-          <p>GENERATE</p>
-          <IconArrowRight />
+      <form onSubmit={handleSubmit}>
+        <div className="flex justify-between">
+          <label>Character Length</label>
+          <span className="passwordLength | text-sharp-green text-2xl">
+            {charLength}
+          </span>
         </div>
-      </button>
+        <input
+          id="lengthSlider"
+          type="range"
+          min="5"
+          max="30"
+          value={charLength}
+          onChange={handleLengthChange}
+          className="w-full h-2 rounded-lg appearance-auto cursor-pointer accent-sharp-green"
+        />
+        <div className="flex justify-start items-center space-x-2 ">
+          <input
+            type="checkbox"
+            className="accent-sharp-green appearance-auto border-white"
+            id="includeUpper"
+            onChange={handleUpperCases}
+          />
+          <label>Include Uppercase Letters</label>
+        </div>
+        <div className="flex justify-start space-x-2">
+          <input
+            type="checkbox"
+            className="accent-sharp-green"
+            id="includeLower"
+            onChange={handleLowerCases}
+          />
+          <label>Include Lowercase Letters</label>
+        </div>
+        <div className="flex justify-start space-x-2">
+          <input
+            type="checkbox"
+            className="accent-sharp-green"
+            id="includeNumbers"
+            onChange={handleNumbers}
+          />
+          <label>Include Numbers</label>
+        </div>
+        <div className="flex justify-start space-x-2">
+          <input
+            type="checkbox"
+            className="accent-sharp-green"
+            id="includeSymbols"
+            onChange={handleSymbols}
+          />
+          <label>Include Symbols</label>
+        </div>
+        <div className="flex bg-black justify-between px-10 py-2">
+          <p className="text-light-gray">STRENGTH</p>
+          <span id="passwordLevel">LEVEL</span>
+        </div>
+        <button
+          type="submit"
+          className="w-[100%] max-w-[500px] generatePassword | bg-sharp-green text-black p-4 "
+        >
+          <div className="flex items-center bg-sharp-green justify-center space-x-2">
+            <p>GENERATE</p>
+            <IconArrowRight />
+          </div>
+        </button>
+      </form>
     </div>
   );
 };
 
 export default PasswordOptions;
-function setPasswordCombination(arg0: string) {
-  throw new Error("Function not implemented.");
-}
