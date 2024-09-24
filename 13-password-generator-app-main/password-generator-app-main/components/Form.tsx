@@ -9,7 +9,7 @@ export default function Form({
   setPassword: (password: string) => void;
 }) {
   const [charLength, setCharLength] = useState(10);
-  
+  const copiedMsg = document.querySelector(".copied_msg");
   const handleCharLength = (e: React.FormEvent<HTMLInputElement>) => {
     setCharLength(e.currentTarget.valueAsNumber);
   };
@@ -76,6 +76,7 @@ export default function Form({
         password += PasswordCombination[randomNumber];
       }
       setPassword(password);
+      copiedMsg?.classList.add("hidden");
     }
   };
 

@@ -10,10 +10,10 @@ const HomePage = () => {
     const copiedMsg = document.querySelector(".copied_msg");
     if (password) {
       navigator.clipboard.writeText(password);
-      copiedMsg.classList.remove("hidden");
+      copiedMsg?.classList.remove("hidden");
     } else {
       navigator.clipboard.writeText("");
-      copiedMsg.classList.add("hidden");
+      copiedMsg?.classList.add("hidden");
     }
   }
   return (
