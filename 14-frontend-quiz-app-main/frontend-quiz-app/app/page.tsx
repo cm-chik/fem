@@ -1,5 +1,8 @@
 "use client";
+import IconHtml from "../public/icon-html.svg";
+
 import { useEffect } from "react";
+
 export default function Home() {
   useEffect(() => {
     const theme = localStorage.getItem("theme");
@@ -17,13 +20,24 @@ export default function Home() {
       localStorage.setItem("theme", "dark");
     }
   };
+
+  const subjects = [
+    { id: 1, name: "HTML", icon: { IconHtml } },
+    { id: 1 },
+    { id: 1 },
+    { id: 1 },
+  ];
+
   return (
     <div>
       <button onClick={toggleTheme}>Toggle Theme</button>
-      <div className="bg-white dark:bg-black">
-        Welcome to the <b>Frontend Quiz!</b>
-        <br />
-        Pick a subject to get started.
+      <div className="flex flex-wrap items-center justify-center space-x-2">
+        <div className="text-3xl ">
+          Welcome to the <b>Frontend Quiz!</b>
+          <p className="text-xs italic">Pick a subject to get started.</p>
+        </div>
+        <IconHtml />
+        <div>HTML CSS</div>
       </div>
     </div>
   );
