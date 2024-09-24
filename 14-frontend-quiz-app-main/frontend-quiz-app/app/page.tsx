@@ -1,5 +1,5 @@
 "use client";
-import IconHtml from "../public/icon-html.svg";
+import IconHtml from "@/public/icon-html.svg";
 
 import { useEffect } from "react";
 
