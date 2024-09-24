@@ -1,6 +1,6 @@
 "use client";
 
-import PasswordOptions from "@/components/Form"; // Corrected casing
+import Form from "@/components/Form"; // Corrected casing
 import { useState } from "react";
 import IconCopy from "@/components/IconCopy";
 
@@ -17,11 +17,11 @@ const HomePage = () => {
     }
   }
   return (
-    <div className="g-deep-gray flex flex-wrap flex-col items-center justify-center bg-black font-spaceMono space-y-5">
-      <div className="text-light-gray pt-10">Password Generator</div>
-      <div className="w-full max-w-[500px] bg-dark-gray font-Outfit text-white flex items-center justify-between p-4">
+    <div className="bg-deep-grey flex flex-wrap flex-col items-center justify-center font-spaceMono space-y-5 w-screen h-screen p-4">
+      <div className="text-light-grey pt-10">Password Generator</div>
+      <div className="w-full max-w-[500px] bg-dark-grey font-Outfit text-white flex items-center justify-between p-4">
         <input
-          className="text-xl bg-dark-gray"
+          className="text-xl bg-dark-grey"
           placeholder="Select options"
           disabled
           value={password}
@@ -33,7 +33,7 @@ const HomePage = () => {
           <IconCopy />
         </button>
       </div>
-      <PasswordOptions setPassword={setPassword} />
+      <Form setPassword={setPassword} />
     </div>
   );
 };
