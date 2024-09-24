@@ -138,7 +138,7 @@ export default function Form({
           <label>Include Symbols</label>
         </div>
         <div className="flex bg-black justify-between px-10 py-2">
-          <p className="text-light-gray">STRENGTH</p>
+          <p className="text-light-gray uppercase">strength</p>
           <span id="passwordLevel">{handleStrength()}</span>
         </div>
         <button
@@ -147,7 +147,7 @@ export default function Form({
           className="group disabled:bg-gray-500 w-[100%] max-w-[500px] generatePassword | bg-sharp-green text-black p-4 "
         >
           <div className="group-disabled:bg-gray-500 flex items-center bg-sharp-green justify-center space-x-2 ">
-            <p>GENERATE</p>
+            <p className="uppercase"> generate</p>
             <IconArrowRight />
           </div>
         </button>

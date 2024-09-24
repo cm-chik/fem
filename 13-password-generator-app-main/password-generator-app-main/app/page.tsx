@@ -27,7 +27,9 @@ const HomePage = () => {
           value={password}
         ></input>
         <button className="flex space-x-2" onClick={copyPassword}>
-          <p className="copied_msg | text-sharp-green hidden">COPIED</p>
+          <p className="copied_msg | text-sharp-green hidden uppercase">
+            copied
+          </p>
           <IconCopy />
         </button>
       </div>
