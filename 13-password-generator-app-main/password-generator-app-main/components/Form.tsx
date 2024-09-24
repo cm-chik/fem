@@ -80,7 +80,7 @@ export default function Form({
   };
 
   return (
-    <div>
+    <div className="w-full max-w-[500px]">
       <form
         onSubmit={handleSubmit}
         className=" bg-dark-gray font-Outfit text-white flex flex-col justify-normal p-5 space-y-4"
