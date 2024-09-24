@@ -36,7 +36,7 @@ export default function Home() {
           Welcome to the <b>Frontend Quiz!</b>
           <p className="text-xs italic">Pick a subject to get started.</p>
         </div>
-        <div>
+        <div className="flex items-center">
           <IconHtml />
           HTML
         </div>
