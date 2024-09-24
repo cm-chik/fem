@@ -9,7 +9,8 @@ export default function Form({
   setPassword: (password: string) => void;
 }) {
   const [charLength, setCharLength] = useState(10);
-  const handleLengthChange = (e: React.FormEvent<HTMLInputElement>) => {
+  
+  const handleCharLength = (e: React.FormEvent<HTMLInputElement>) => {
     setCharLength(e.currentTarget.valueAsNumber);
   };
   const [PasswordCombination, setPasswordCombination] = useState("");
@@ -53,11 +54,29 @@ export default function Form({
       );
     }
   };
-
+  const handleStrength = () => {
+    if (charLength == 0) {
+      return "N/A";
+    } else if (charLength < 10) {
+      return "LOW";
+    } else if (charLength < 20) {
+      return "MEDIUM";
+    } else {
+      return "HIGH";
+    }
+  };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setPassword(PasswordCombination);
+    let password = "";
+    for (let i = 0; i < charLength; i++) {
+      const randomNumber = Math.floor(
+        Math.random() * PasswordCombination.length
+      );
+      password += PasswordCombination[randomNumber];
+    }
+    setPassword(password);
   };
+
   return (
     <div>
       <form
@@ -76,7 +95,7 @@ export default function Form({
           min="5"
           max="30"
           value={charLength}
-          onChange={handleLengthChange}
+          onChange={handleCharLength}
           className="w-full h-2 rounded-lg appearance-auto cursor-pointer accent-sharp-green"
         />
         <div className="flex justify-start items-center space-x-2 ">
@@ -117,7 +136,7 @@ export default function Form({
         </div>
         <div className="flex bg-black justify-between px-10 py-2">
           <p className="text-light-gray">STRENGTH</p>
-          <span id="passwordLevel">LEVEL</span>
+          <span id="passwordLevel">{handleStrength()}</span>
         </div>
         <button
           type="submit"
