@@ -1,24 +1,27 @@
 "use client";
 
-import PasswordOptions from "@/components/PasswordOptions"; // Corrected casing
-import PasswordLengthSlider from "../components/PasswordLengthSlider";
-import PasswordGeneratorButton from "@/components/PasswordGeneratorButton";
-import PasswordDisplay from "@/components/PasswordDisplay";
-import PasswordStrength from "@/components/PasswordStrength";
+import PasswordOptions from "@/components/Form"; // Corrected casing
 import { useState } from "react";
+import IconCopy from "@/components/IconCopy";
 
 const HomePage = () => {
-  const [passwordCombination, setPasswordCombination] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <div className="bg-deep-gray flex flex-wrap flex-col items-center justify-center bg-black font-spaceMono space-y-5 px-4">
       <div className="text-light-gray pt-10">Password Generator</div>
-      <PasswordDisplay />
-      <div className="w-[100%] max-w-[500px] bg-dark-gray font-Outfit text-white flex flex-col justify-normal p-6 space-y-4">
-        <PasswordLengthSlider />
-        <PasswordGeneratorButton />
-        <PasswordStrength />
-        <PasswordOptions />
+      <div className="w-[100%] max-w-[500px] bg-dark-gray font-Outfit text-white flex items-center justify-between p-4">
+        <input
+          className="text-xl bg-dark-gray"
+          placeholder="P4$5W0rD!"
+          disabled
+          value={password}
+        ></input>
+        <div className="flex space-x-2">
+          <p className="text-sharp-green hidden">COPIED</p>
+          <IconCopy />
+        </div>
       </div>
+      <PasswordOptions />
     </div>
   );
 };

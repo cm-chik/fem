@@ -1,14 +1,21 @@
 "use client";
 
+import { useState } from "react";
+import IconArrowRight from "./IconArrowRight";
 const PasswordOptions = () => {
+  const [charLength, setCharLength] = useState(10);
+  const handleLengthChange = (e: React.FormEvent<HTMLInputElement>) => {
+    setCharLength(e.currentTarget.valueAsNumber);
+  };
+  const [PasswordCombination, setPasswordCombination] = useState("");
   const handleUpperCases = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.checked) {
       setPasswordCombination(
-        setPasswordCombination + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        PasswordCombination + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
       );
     } else {
       setPasswordCombination(
-        setPasswordCombination.replace("ABCDEFGHIJKLMNOPQRSTUVWXYZ", "")
+        PasswordCombination.replace("ABCDEFGHIJKLMNOPQRSTUVWXYZ", "")
       );
     }
   };
@@ -16,36 +23,49 @@ const PasswordOptions = () => {
   const handleLowerCases = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.checked) {
       setPasswordCombination(
-        setPasswordCombination + "abcdefghijklmnopqrstuvwxyz"
+        PasswordCombination + "abcdefghijklmnopqrstuvwxyz"
       );
     } else {
       setPasswordCombination(
-        setPasswordCombination.replace("abcdefghijklmnopqrstuvwxyz", "")
+        PasswordCombination.replace("abcdefghijklmnopqrstuvwxyz", "")
       );
     }
   };
 
   const handleNumbers = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.checked) {
-      setPasswordCombination(setPasswordCombination + "1234567890");
+      setPasswordCombination(PasswordCombination + "1234567890");
     } else {
-      setPasswordCombination(setPasswordCombination.replace("1234567890", ""));
+      setPasswordCombination(PasswordCombination.replace("1234567890", ""));
     }
   };
   const handleSymbols = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.checked) {
-      setPasswordCombination(
-        setPasswordCombination + "!@#$%^&*()_+{}[]:;<>,.?/~"
-      );
+      setPasswordCombination(PasswordCombination + "!@#$%^&*()_+{}[]:;<>,.?/~");
     } else {
       setPasswordCombination(
-        setPasswordCombination.replace("!@#$%^&*()_+{}[]:;<>,.?/~", "")
+        PasswordCombination.replace("!@#$%^&*()_+{}[]:;<>,.?/~", "")
       );
     }
   };
 
   return (
-    <div className="space-y-4">
+    <div className="w-[100%] max-w-[500px] bg-dark-gray font-Outfit text-white flex flex-col justify-normal p-6 space-y-4">
+      <div className="flex justify-between">
+        <label>Character Length</label>
+        <span className="passwordLength | text-sharp-green text-2xl">
+          {charLength}
+        </span>
+      </div>
+      <input
+        id="lengthSlider"
+        type="range"
+        min="5"
+        max="30"
+        value={charLength}
+        onChange={handleLengthChange}
+        className="w-full h-2 rounded-lg appearance-auto cursor-pointer accent-sharp-green"
+      />
       <div className="flex justify-start items-center space-x-2 ">
         <input
           type="checkbox"
@@ -82,6 +102,19 @@ const PasswordOptions = () => {
         />
         <label>Include Symbols</label>
       </div>
+      <div className="flex bg-black justify-between px-10 py-2">
+        <p className="text-light-gray">STRENGTH</p>
+        <span id="passwordLevel">LEVEL</span>
+      </div>
+      <button
+        className="w-[100%] max-w-[500px] generatePassword | bg-sharp-green text-black p-4 "
+        //onClick={}
+      >
+        <div className="flex items-center bg-sharp-green justify-center space-x-2">
+          <p>GENERATE</p>
+          <IconArrowRight />
+        </div>
+      </button>
     </div>
   );
 };
