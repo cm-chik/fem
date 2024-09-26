@@ -79,7 +79,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: './15-interactive-rating-component-main/interactive-rating-component'
 
   # Deployment job
   deploy:
