@@ -16,48 +16,69 @@ const FeedbackForm = () => {
     setIsSelected(true);
   };
 
-  return !isSubmitted ? (
+  return (
     <div className="bg-gray-800 p-8 rounded-lg shadow-md flex flex-col space-y-6 max-w-[400px]">
-      <Image
-        src="/icon-star.svg"
-        alt="star"
-        width={20}
-        height={20}
-        className="rounded-full bg-gray-700 p-1"
-      />
-      <h1 className="text-2xl font-bold">How did we do?</h1>
-      <p className="text-gray-400 text-xs">
-        Please let us know how we did with your support request. All feedback is
-        appreciated to help us improve our offering!
-      </p>
-      <div className="flex justify-between px-4 py-2">
-        {[1, 2, 3, 4, 5].map((i) => (
+      {isSubmitted ? (
+        <>
+          <div className="flex flex-col items-center align-middle text-center space-y-4">
+            <Image
+              src="/illustration-thank-you.svg"
+              alt="thank you"
+              width={200}
+              height={200}
+            />
+            <p className="bg-gray-700 p-2 px-4 rounded-full text-orange-400">
+              You selected {rating} out of 5
+            </p>
+            <p className="text-center text-xl">Thank you!</p>
+            <p>
+              We appreicate you taking the time to give a rating. If you ever
+              need more support, don't hestitate to get in touch!
+            </p>
+          </div>
+        </>
+      ) : (
+        <>
+          <Image
+            src="/icon-star.svg"
+            alt="star"
+            width={20}
+            height={20}
+            className="rounded-full bg-gray-700 p-1"
+          />
+          <h1 className="text-2xl font-bold">How did we do?</h1>
+          <p className="text-gray-400 text-xs">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+          <div className="flex justify-between px-4 py-2">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <button
+                key={i}
+                className={`p-1 bg-gray-700 rounded-full text-gray-400 w-10 h-10
+                text-xs  ${
+                  rating === i ? "bg-white" : "bg-gray-800"
+                } active:text-gray-800 hover:bg-orange-500
+                hover:text-gray-800`}
+                value={i}
+                onClick={() => selectRating(i)}
+              >
+                {i}
+              </button>
+            ))}
+          </div>
           <button
-            key={i}
-            className={`p-1 bg-gray-700 rounded-full text-gray-400 w-10 h-10
-            text-xs  ${
-              rating === i ? "bg-white" : "bg-gray-800"
-            } active:text-gray-800 hover:bg-orange-500
-            hover:text-gray-800`}
-            value={i}
-            onClick={() => selectRating(i)}
+            className="bg-orange-500 p-2 rounded-2xl text-gray-800 uppercase hover:bg-white disabled:bg-gray-500"
+            disabled={!isSelected}
+            onClick={() => {
+              handleSubmit();
+            }}
           >
-            {i}
+            Submit
           </button>
-        ))}
-      </div>
-      <button
-        className="bg-orange-500 p-2 rounded-2xl text-gray-800 uppercase hover:bg-white disabled:bg-gray-500"
-        disabled={!isSelected}
-        onClick={() => {
-          handleSubmit();
-        }}
-      >
-        Submit
-      </button>
+        </>
+      )}
     </div>
-  ) : (
-    <div>thank you submitted</div>
   );
 };
 
