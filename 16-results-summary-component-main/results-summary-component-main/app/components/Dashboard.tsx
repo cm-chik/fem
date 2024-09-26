@@ -4,8 +4,8 @@ const Dashboard = () => {
   const avgMark = 80;
   return (
     <>
-      <div className="flex flex-wrap max-w-[600px]  items-center justify-between bg-white rounded-xl">
-        <div className="flex flex-col sm:w-[50%] h-[300px] p-6 bg-blue-600 rounded-xl text-white text-center ">
+      <div className="flex flex-wrap max-w-[500px]  items-center justify-between bg-white rounded-xl">
+        <div className="flex flex-col max-sm:w-full sm:w-[50%] h-[300px] p-6 bg-blue-600 rounded-xl text-white text-center ">
           <p className="text-gray-300">Your Result</p>
           <div className="py-10">
             <span className="text-white text-2xl font-bold rounded-full p-6 border-2 border-blue-800 bg-blue-800">
