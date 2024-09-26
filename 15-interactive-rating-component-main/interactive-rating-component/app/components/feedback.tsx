@@ -21,7 +21,7 @@ const FeedbackForm = () => {
       {isSubmitted ? (
         <div className="flex flex-col items-center align-middle text-center space-y-6 p-4">
           <Image
-            src="/illustration-thank-you.svg"
+            src="/nextjs-github-pages/illustration-thank-you.svg"
             alt="thank you"
             width={200}
             height={200}
@@ -38,7 +38,7 @@ const FeedbackForm = () => {
       ) : (
         <>
           <Image
-            src="/icon-star.svg"
+            src="/nextjs-github-pages/icon-star.svg"
             alt="star"
             width={40}
             height={40}
