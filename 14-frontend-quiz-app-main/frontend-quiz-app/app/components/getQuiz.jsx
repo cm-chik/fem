@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 async function GetQuiz() {
-  const response = await fetch("http://localhost:4000/quizzes");
+  const response = await fetch("http://localhost:4000/");
   return response.json();
 }
 

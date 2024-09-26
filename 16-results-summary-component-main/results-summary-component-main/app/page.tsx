@@ -1,7 +1,7 @@
 import Dashboard from "./components/Dashboard";
 export default function Home() {
   return (
-    <div className="">
+    <div className="flex justify-center items-center h-screen">
       <main className="">
         <Dashboard />
       </main>
