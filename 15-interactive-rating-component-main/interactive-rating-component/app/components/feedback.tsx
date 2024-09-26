@@ -6,13 +6,17 @@ import { useState } from "react";
 const FeedbackForm = () => {
   const [rating, setRating] = useState(0);
   const [isSelected, setIsSelected] = useState(false);
-
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const handleSubmit = () => {
+    console.log(rating);
+    setIsSubmitted(true);
+  };
   const selectRating = (rating: number) => {
     setRating(rating);
     setIsSelected(true);
   };
 
-  return (
+  return !isSubmitted ? (
     <div className="bg-gray-800 p-8 rounded-lg shadow-md flex flex-col space-y-6 max-w-[400px]">
       <Image
         src="/icon-star.svg"
@@ -29,6 +33,7 @@ const FeedbackForm = () => {
       <div className="flex justify-between px-4 py-2">
         {[1, 2, 3, 4, 5].map((i) => (
           <button
+            key={i}
             className={`p-1 bg-gray-700 rounded-full text-gray-400 w-10 h-10
             text-xs  ${
               rating === i ? "bg-white" : "bg-gray-800"
@@ -44,10 +49,15 @@ const FeedbackForm = () => {
       <button
         className="bg-orange-500 p-2 rounded-2xl text-gray-800 uppercase hover:bg-white disabled:bg-gray-500"
         disabled={!isSelected}
+        onClick={() => {
+          handleSubmit();
+        }}
       >
         Submit
       </button>
     </div>
+  ) : (
+    <div>thank you submitted</div>
   );
 };
 
