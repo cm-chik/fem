@@ -17,7 +17,7 @@ const FeedbackForm = () => {
   };
 
   return (
-    <div className="bg-gray-800 p-8 rounded-lg shadow-md flex flex-col space-y-6 max-w-[400px]">
+    <div className="bg-gray-800 p-8 rounded-3xl shadow-md flex flex-col space-y-6 max-w-[400px]">
       {isSubmitted ? (
         <>
           <div className="flex flex-col items-center align-middle text-center space-y-4">
@@ -31,7 +31,7 @@ const FeedbackForm = () => {
               You selected {rating} out of 5
             </p>
             <p className="text-center text-xl">Thank you!</p>
-            <p>
+            <p className="text-gray-400 text-sm">
               We appreicate you taking the time to give a rating. If you ever
               need more support, don't hestitate to get in touch!
             </p>
@@ -47,7 +47,7 @@ const FeedbackForm = () => {
             className="rounded-full bg-gray-700 p-1"
           />
           <h1 className="text-2xl font-bold">How did we do?</h1>
-          <p className="text-gray-400 text-xs">
+          <p className="text-gray-400 text-sm">
             Please let us know how we did with your support request. All
             feedback is appreciated to help us improve our offering!
           </p>
