@@ -19,14 +19,14 @@ const FeedbackForm = () => {
   return (
     <>
       {isSubmitted ? (
-        <div className="flex flex-col items-center align-middle text-center space-y-4">
+        <div className="flex flex-col items-center align-middle text-center space-y-6 p-4">
           <Image
             src="/illustration-thank-you.svg"
             alt="thank you"
             width={200}
             height={200}
           />
-          <p className="bg-gray-700 p-2 px-4 rounded-full text-orange-400">
+          <p className="bg-gray-700 p-1 px-4 rounded-full text-xs text-orange-400">
             You selected {rating} out of 5
           </p>
           <p className="text-center text-xl">Thank you!</p>
@@ -40,9 +40,9 @@ const FeedbackForm = () => {
           <Image
             src="/icon-star.svg"
             alt="star"
-            width={20}
-            height={20}
-            className="rounded-full bg-gray-700 p-1"
+            width={40}
+            height={40}
+            className="rounded-full bg-gray-700 p-3"
           />
           <h1 className="text-2xl font-bold">How did we do?</h1>
           <p className="text-gray-400 text-sm">
