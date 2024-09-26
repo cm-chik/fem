@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './12-tip-calculator-app-main'
+          path: './15-interactive-rating-component-main/interactive-rating-component'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
