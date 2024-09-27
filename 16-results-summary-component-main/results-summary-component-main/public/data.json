@@ -4,28 +4,28 @@
       "category": "Reaction",
       "score": 80,
       "icon": "/icon-reaction.svg",
-      "color": "text-red-600",
-      "bgColor": "bg-red-100"
+      "color": "#ef4444",
+      "bgColor": "#fee2e2"
     },
     {
       "category": "Memory",
       "score": 92,
       "icon": "/icon-memory.svg",
-      "color": "text-yellow-400",
-      "bgColor": "bg-yellow-100"
+      "color": "#facc15",
+      "bgColor": "#fef9c3"
     },
     {
       "category": "Verbal",
       "score": 61,
       "icon": "/icon-verbal.svg",
-      "color": "text-green-400",
-      "bgColor": "bg-green-100"
+      "color": "#4ade80",
+      "bgColor": "#dcfce7"
     },
     {
       "category": "Visual",
       "score": 72,
       "icon": "/icon-visual.svg",
-      "color": "text-blue-400",
+      "color": "#60a5fa",
       "bgColor": "bg-blue-100"
     }
   ]

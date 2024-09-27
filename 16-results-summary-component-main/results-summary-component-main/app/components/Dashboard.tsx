@@ -21,7 +21,7 @@ const Dashboard = () => {
         <div className="flex flex-col max-sm:w-full sm:w-[50%] h-[300px] p-6 bg-white rounded-xl text-gray-800 justify-between">
           <p className="text-gray-800 font-bold">Summary</p>
           <GetPersonalData />
-          <button className="bg-blue-950 text-white rounded-3xl p-2">
+          <button className="bg-blue-950 text-white rounded-3xl p-2 hover:bg-blue-800">
             Continue
           </button>
         </div>
