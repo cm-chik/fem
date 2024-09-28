@@ -5,6 +5,7 @@ async function GetData() {
   return response.json();
 }
 
+
 export default async function GetPersonalData() {
   const PersonalData = await GetData();
   return (
