@@ -1,9 +1,16 @@
-import Categor from "./components/categor";
+"use client";
+
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import ResultSummary from "./features/ResultSummary";
 
 export default function Home() {
+  const queryClient = new QueryClient();
+
   return (
-    <div>
-      <Categor />
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div>
+        <ResultSummary />
+      </div>
+    </QueryClientProvider>
   );
 }

@@ -5,3 +5,5 @@ export function calculateSum(numbers: number[]): number {
 
   return numbers.reduce((acc, current) => acc + current, 0);
 }
+
+export default calculateSum;
