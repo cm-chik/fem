@@ -1,4 +1,5 @@
 "use client";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import useFetchCategories from "../hooks/UseFetchCategories";
 
@@ -12,4 +13,12 @@ const Categor = () => {
   });
 };
 
-export default Categor;
+const CategorProvider = () => {
+  return (
+    <QueryClientProvider client={new QueryClient()}>
+      <Categor />
+    </QueryClientProvider>
+  );
+};
+
+export default CategorProvider;
