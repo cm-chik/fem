@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev-pc": "set PORT=3089 && next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

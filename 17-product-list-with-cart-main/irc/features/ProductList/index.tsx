@@ -3,20 +3,26 @@
 import useProductList from "./hooks/useProductList";
 import ProductCard from "./components/ProductCard";
 import { Product } from "../../interfaces/index";
+import { useState, useEffect } from "react";
 //import { default as data } from "@/public/data.json";
 
 export default function ProductList() {
   const { data, isLoading, error } = useProductList();
+  const [products, setProducts] = useState<Product[]>();
+  useEffect(() => {
+    setProducts(data);
+  }, [data]);
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error </div>;
-  return (
-    <div>
-      <div className="font-bold text-xl">Desserts</div>
-      <div className="grid sm:grid-cols-3">
-        {data.map((item: Product, index: number) => {
-          return <ProductCard key={index} product={item} />;
-        })}
+  else if (products)
+    return (
+      <div className="px-4">
+        <div className="font-bold text-xl py-4">Desserts</div>
+        <div className="grid md:grid-cols-3 gap-4">
+          {products.map((item: Product, index: number) => {
+            return <ProductCard key={index} product={item} />;
+          })}
+        </div>
       </div>
-    </div>
-  );
+    );
 }
