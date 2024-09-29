@@ -8,11 +8,11 @@ export default function Home() {
   const queryClient = new QueryClient();
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="bg-white font-red-hat-display text-black grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-        <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+      <div className="flex bg-white font-red-hat-display text-black min-h-screen p-12 justify-center items-center w-screen">
+        <main className="grid sm:grid-cols-[auto,1fr] justify-center">
           <ProductList />
           <YourCart />
-          <OrderConfirmed />
+          {/* <OrderConfirmed /> */}
         </main>
       </div>
     </QueryClientProvider>

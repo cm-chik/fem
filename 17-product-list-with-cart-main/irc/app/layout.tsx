@@ -4,8 +4,7 @@ import "@/interfaces/globals.css";
 
 const redHatDisplay = Red_Hat_Display({
   subsets: ["latin"],
-  variable: "--font-red-hat-display",
-  weight: ["400", "500", "700", "900"],
+  weight: ["400", "700", "900"],
 });
 
 export const metadata: Metadata = {
@@ -20,11 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${redHatDisplay.variable} antialiased font-red-hat-display`}
-      >
-        {children}
-      </body>
+      <body className={redHatDisplay.className}>{children}</body>
     </html>
   );
 }

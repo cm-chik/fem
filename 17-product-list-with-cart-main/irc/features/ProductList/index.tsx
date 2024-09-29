@@ -3,7 +3,6 @@
 import useProductList from "./hooks/useProductList";
 import ProductCard from "./components/ProductCard";
 import { Product } from "../../interfaces/index";
-
 //import { default as data } from "@/public/data.json";
 
 export default function ProductList() {
@@ -12,10 +11,10 @@ export default function ProductList() {
   if (error) return <div>Error </div>;
   return (
     <div>
-      <p>Desserts</p>
-      <div>
-        {data.map((item: Product) => {
-          return <ProductCard key={item.id} product={item} />;
+      <div className="font-bold text-xl">Desserts</div>
+      <div className="grid sm:grid-cols-3 space-y-8">
+        {data.map((item: Product, index: number) => {
+          return <ProductCard key={index} product={item} />
         })}
       </div>
     </div>
