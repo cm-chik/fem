@@ -1,10 +1,10 @@
 import { ICategory } from "@/app/interfaces";
 import useFetchCategories from "../hooks/UseFetchCategories";
-import SummaryIcon from "./SummaryIcon";
-import SummaryContainer from "./SummaryContainer";
-import SummaryCategory from "./SummaryCategory";
-import SummaryScore from "./SummaryScore";
-import ContinueButton from "./ContinueButton";
+import SummaryIcon from "./SummaryIcon2";
+import SummaryContainer from "./SummaryContainer2";
+import SummaryCategory from "./SummaryCategory2";
+import SummaryScore from "./SummaryScore2";
+import ContinueButton from "./ContinueButton2";
 
 const Summary = () => {
   const { data, isLoading, error } = useFetchCategories();
