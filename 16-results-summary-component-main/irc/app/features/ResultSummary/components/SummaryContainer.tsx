@@ -1,4 +1,7 @@
-const SummaryContainer = (props) => {
+const SummaryContainer = (props: {
+  category: string;
+  children: React.ReactNode;
+}) => {
   switch (props.category) {
     case "Reaction":
       return (

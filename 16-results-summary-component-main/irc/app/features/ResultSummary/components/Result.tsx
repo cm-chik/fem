@@ -1,6 +1,6 @@
 import useFetchCategories from "../hooks/UseFetchCategories";
 import calculateAverage from "@/utils/average";
-import ResultAverageScore from "./ResultAverageScore2";
+import ResultAverageScore from "./ResultAverageScore";
 
 const Result = () => {
   const { data, isLoading, error } = useFetchCategories();
