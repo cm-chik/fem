@@ -8,7 +8,7 @@ export default function Home() {
   const queryClient = new QueryClient();
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex bg-white font-red-hat-display text-black min-h-screen p-12 justify-center items-center w-screen">
+      <div className="flex bg-orange-50 font-red-hat-display text-black min-h-screen sm:p-12 justify-center items-center w-screen ">
         <main className="grid sm:grid-cols-[auto,1fr] justify-center">
           <ProductList />
           <YourCart />

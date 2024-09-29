@@ -12,9 +12,9 @@ export default function ProductList() {
   return (
     <div>
       <div className="font-bold text-xl">Desserts</div>
-      <div className="grid sm:grid-cols-3 space-y-8">
+      <div className="grid sm:grid-cols-3">
         {data.map((item: Product, index: number) => {
-          return <ProductCard key={index} product={item} />
+          return <ProductCard key={index} product={item} />;
         })}
       </div>
     </div>
