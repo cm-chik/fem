@@ -1,5 +1,5 @@
 const ResultAverageScore = ({ data }: { data: number }) => {
-  return <div>{data}</div>;
+  return <>{Math.round(data)}</>;
 };
 
 export default ResultAverageScore;
