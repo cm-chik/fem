@@ -9,15 +9,14 @@ export default function ProductCard({ product }: { product: Product }) {
   return (
     <div className="flex flex-col p-1">
       <Image
-        className="block sm:hidden border-2  rounded-xl"
+        className="sm:hidden max-sm:block border-2 rounded-xl"
         src={thumbnailPath}
         alt={product.name}
         width={100}
         height={96}
-        style={{ width: "100%", height: "auto" }}
       />
       <Image
-        className="max-sm:hidden max-md:block hidden border-2  rounded-xl"
+        className="max-md:block md:hidden border-2  rounded-xl"
         src={mobilePath}
         alt={product.name}
         width={654}
