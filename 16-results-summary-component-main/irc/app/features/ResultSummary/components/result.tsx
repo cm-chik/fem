@@ -10,7 +10,7 @@ const Result = () => {
     data.message.map((item: { score: number }) => item.score)
   );
   return (
-    <div>
+    <div className="flex flex-col max-sm:w-full sm:w-[50%] h-[300px] p-6 bg-[#7857ff] rounded-xl text-white text-center ">
       <p>Your Result</p>
       <ResultAverageScore data={AverageScore} />
       of 100

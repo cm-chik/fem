@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div>
+      <div className="flex justify-center items-center h-screen">
         <ResultSummary />
       </div>
     </QueryClientProvider>
