@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { default as products } from "@/public/data.json";
+import { products } from "@/data/data.json";
 
 // To handle a GET request to /api
 export async function GET() {

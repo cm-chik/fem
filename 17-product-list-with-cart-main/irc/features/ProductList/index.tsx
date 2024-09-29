@@ -1,23 +1,23 @@
+"use client";
+
 import useProductList from "./hooks/useProductList";
 import ProductCard from "./components/ProductCard";
 import { Product } from "../../interfaces/index";
 
+//import { default as data } from "@/public/data.json";
+
 export default function ProductList() {
-  const { data, isLoading, isError } = useProductList();
-  console.log(data);
+  const { data, isLoading, error } = useProductList();
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error </div>;
   return (
     <div>
       <p>Desserts</p>
-      if({data})
-      {
-        <div>
-          {data.map((product: Product) => {
-            return <ProductCard key={product.id} product={product} />;
-          })}
-        </div>
-      }{" "}
-      else if ({isError}) {<div>Error</div>} else if ({isLoading}){" "}
-      {<div>Loading...</div>} else {<div>No data</div>}
+      <div>
+        {data.map((item: Product) => {
+          return <ProductCard key={item.id} product={item} />;
+        })}
+      </div>
     </div>
   );
 }

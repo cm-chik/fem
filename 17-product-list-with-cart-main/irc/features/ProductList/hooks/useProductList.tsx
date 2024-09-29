@@ -1,9 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 
-export default function useProductList() {
-  const { data, isLoading, isError } = useQuery({
+function useProductList() {
+  const { data, isLoading, error } = useQuery({
     queryKey: ["products"],
     queryFn: () => fetch("/data.json").then((res) => res.json()),
   });
-  return { data, isLoading, isError };
+  return { data, isLoading, error };
 }
+
+export default useProductList;
