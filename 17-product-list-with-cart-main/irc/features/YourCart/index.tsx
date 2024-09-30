@@ -1,9 +1,18 @@
 import ConfirmOrderButton from "./components/ConfirmOrderButton";
 import Image from "next/image";
+import { CartContext } from "./hooks/cartContext";
+import { Product } from "@/interfaces";
+import { useContext } from "react";
+
 export default function YourCart() {
+  const [cart, setCart] = useContext(CartContext);
+
   return (
     <div className="bg-white rounded-xl p-4">
       <div className="font-bold text-xl text-orange-700">Your Cart (7)</div>
+      {cart.map((cartItem: Product) => {
+        return <div key={cartItem.id}>{cartItem.name}</div>;
+      })}
       <div className="bg-orange-50 text-xs flex">
         <Image
           src="/image/icon-carbon-neutral.svg"

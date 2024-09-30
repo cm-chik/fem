@@ -1,14 +1,15 @@
 "use client";
 
-import useProductList from "./hooks/useProductList";
+import useProductContext from "./hooks/ProductContext";
 import ProductCard from "./components/ProductCard";
 import { Product } from "../../interfaces/index";
 import { useState, useEffect } from "react";
 //import { default as data } from "@/public/data.json";
 
 export default function ProductList() {
-  const { data, isLoading, error } = useProductList();
+  const { data, isLoading, error } = useProductContext();
   const [products, setProducts] = useState<Product[]>();
+
   useEffect(() => {
     setProducts(data);
   }, [data]);
