@@ -1,6 +1,6 @@
 "use client";
 
-import useProductContext from "./hooks/ProductContext";
+import useProductContext from "./context/ProductContext";
 import ProductCard from "./components/ProductCard";
 import { Product } from "../../interfaces/index";
 import { useState, useEffect } from "react";

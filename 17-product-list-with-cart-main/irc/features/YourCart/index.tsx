@@ -1,6 +1,6 @@
 import ConfirmOrderButton from "./components/ConfirmOrderButton";
 import Image from "next/image";
-import { CartContext } from "./hooks/cartContext";
+import { CartContext } from "./context/cartContext";
 import { Product } from "@/interfaces";
 import { useContext } from "react";
 
