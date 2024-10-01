@@ -17,12 +17,12 @@ export default function CartRow(props: CartItem) {
           </p>
         </div>
       </div>
-      <button className="border-orange-200 rounded-full border-2 p-1">
+      <button className="border-orange-200 rounded-full border-2 p-1  hover:border-orange-700 hover:bg-orange-700 duration-300">
         <Image
           src="/image/icon-remove-item.svg"
           alt="remove"
-          width={20}
-          height={20}
+          width={10}
+          height={10}
           onClick={() => removeFromCart(props)}
         />
       </button>

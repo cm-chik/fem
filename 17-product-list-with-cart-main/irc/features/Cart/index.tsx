@@ -1,34 +1,18 @@
-import { CartItem } from "@/interfaces";
 import Image from "next/image";
 import ConfirmOrderButton from "./components/ConfirmOrderButton";
-import CartRow from "./components/CartRow";
 import { useCartContext } from "@/context/cartContext";
+import CartPanel from "./components/CartPanel";
 
 export default function YourCart() {
-  const { cartItems, totalCartItems, totalCartItemsPrice } = useCartContext();
-
+  const { cartItems, totalCartItems } = useCartContext();
   return (
-    <div className="text-xl  bg-white p-6 rounded-md h-fit">
+    <div className=" bg-white p-6 rounded-md h-fit">
       <p className="font-bold text-xl text-orange-700">
         Your Cart ({totalCartItems})
       </p>
       {cartItems.length > 0 ? (
         <div className="flex flex-col space-y-8">
-          <div>
-            {cartItems.map((item: CartItem) => {
-              return (
-                <div key={item.name}>
-                  <CartRow {...item} />
-                </div>
-              );
-            })}
-          </div>
-          <div className="flex justify-between">
-            <p>Order Total</p>
-            <p className="font-bold text-2xl">
-              ${totalCartItemsPrice.toFixed(2)}
-            </p>
-          </div>
+          <CartPanel />
           <div className="bg-orange-50 text-xs flex py-4 items-center align-middle justify-center">
             <Image
               src="/image/icon-carbon-neutral.svg"
@@ -36,8 +20,10 @@ export default function YourCart() {
               width={20}
               height={20}
             ></Image>
-            This is a <span className="font-bold px-1">carbon-neutral </span>
-            delivery
+            <div>
+              This is a <span className="font-bold px-1">carbon-neutral </span>
+              delivery
+            </div>
           </div>
           <ConfirmOrderButton />
         </div>

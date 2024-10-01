@@ -26,28 +26,36 @@ export const AddToCartButton = (product: Product) => {
           Add to cart
         </button>
       ) : (
-        <div className="flex flex-row text-xs absolute px-3 py-2 max-w-[200px] rounded-full items-center justify-center group bg-orange-700 gap-8 text-white">
-          <Image
-            src="/image/icon-decrement-quantity.svg"
-            height={15}
-            width={15}
-            alt="Decrease"
-            className="bg-orange-700 w-4 h-4 p-1 shrink-0 grow-0  rounded-full border-white border-[1px]"
+        <div className="flex flex-row text-xs absolute py-2 w-[120px] rounded-full items-center justify-center group bg-orange-700 gap-8 text-white">
+          <button
+            className=""
             onClick={() => {
               decreaseQuantity(product);
-            }} //decreaseQuantity
-          />
-          <div className="w-1">{quantity}</div>
-          <Image
-            src="/image/icon-increment-quantity.svg"
-            height={15}
-            width={15}
-            alt="Increase"
-            className="bg-orange-700 w-4 h-4 p-1 shrink-0 grow-0  rounded-full border-white border-[1px]"
+            }}
+          >
+            <Image
+              src="/image/icon-decrement-quantity.svg"
+              height={15}
+              width={15}
+              alt="Decrease"
+              className="bg-orange-700 w-4 h-4 p-1 shrink-0 grow-0 rounded-full border-white border-[1px]"
+              //decreaseQuantity
+            />
+          </button>
+          <div className="">{quantity}</div>
+          <button
             onClick={() => {
               increaseQuantity(product);
             }}
-          />
+          >
+            <Image
+              src="/image/icon-increment-quantity.svg"
+              height={15}
+              width={15}
+              alt="Increase"
+              className="bg-orange-700 w-4 h-4 p-1 shrink-0 grow-0  rounded-full border-white border-[1px]"
+            />
+          </button>
         </div>
       )}
     </div>

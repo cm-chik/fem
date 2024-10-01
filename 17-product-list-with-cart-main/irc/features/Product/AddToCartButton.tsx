@@ -4,14 +4,14 @@ import { useCartContext } from "@/context/cartContext";
 import { Product } from "@/interfaces";
 
 export const AddToCartButton = (product: Product) => {
-  const { addProductToCart, getCartQuantity } = useCartContext();
+  const { increaseQuantity, getCartQuantity } = useCartContext();
   const isInCart = getCartQuantity(product);
   return (
     <div className="flex items-center justify-center group">
       {!isInCart ? (
         <button
           className="flex flex-row text-xs absolute border-gray-400 border-[1px] rounded-full px-3 py-2 bg-white group-hover:border-orange-700 font-bold gap-2 duration-300 group-hover:text-orange-700"
-          onClick={() => addProductToCart(product)}
+          onClick={() => increaseQuantity(product)}
         >
           <Image
             src="/image/icon-add-to-cart.svg"
@@ -35,7 +35,7 @@ export const AddToCartButton = (product: Product) => {
             //   : removeItemFromCart(product)
             //} //decreaseQuantity
           />
-          <div className="w-1">{getCartQuantity(product)}</div>
+          <div className="">{getCartQuantity(product)}</div>
           <Image
             src="/image/icon-increment-quantity.svg"
             height={15}

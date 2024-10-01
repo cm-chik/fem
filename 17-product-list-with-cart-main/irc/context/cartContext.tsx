@@ -10,6 +10,7 @@ const CartContext = createContext<{
   removeFromCart: (item: CartItem) => void;
   decreaseQuantity: (item: Product) => void;
   increaseQuantity: (item: Product) => void;
+  clearCart: () => void;
   getCartItemByProduct: (item: Product) => CartItem | null;
 }>({
   cartItems: [],
@@ -21,6 +22,7 @@ const CartContext = createContext<{
   decreaseQuantity: () => {},
   increaseQuantity: () => {},
   getCartItemByProduct: () => ({}) as CartItem,
+  clearCart: () => {},
 });
 
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
@@ -64,10 +66,8 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
             : cartItem
         );
       } else {
-        return [
-          ...prevItems,
-          { ...item, image: item.image.thumbnail, quantity: 1 },
-        ];
+        const thumbnailPath = "/image/" + item.image.desktop.split("/").pop();
+        return [...prevItems, { ...item, image: thumbnailPath, quantity: 1 }];
       }
       return prevItems;
     });
@@ -98,6 +98,11 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
     localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
   };
 
+  const clearCart = () => {
+    setCartItems([]);
+    localStorage.removeItem("cartItems");
+  };
+
   useEffect(() => {
     const cartItems = localStorage.getItem("cartItems");
     if (cartItems) {
@@ -119,6 +124,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
         decreaseQuantity,
         increaseQuantity,
         getCartItemByProduct,
+        clearCart,
       }}
     >
       {children}
