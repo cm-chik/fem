@@ -26,7 +26,7 @@ export default function ProductList() {
   else if (products)
     return (
       <div>
-        <div className="font-bold text-xl">Desserts</div>
+        <div className="font-bold text-3xl pb-4">Desserts</div>
         <div className="grid md:grid-cols-3 gap-4">
           {products.map((item: Product, index: number) => {
             return <ProductCard key={index} product={item} />;
