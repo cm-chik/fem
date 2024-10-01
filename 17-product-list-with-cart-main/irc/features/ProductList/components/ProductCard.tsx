@@ -5,16 +5,8 @@ export default function ProductCard({ product }: { product: Product }) {
   const desktopPath = "/image/" + product.image.desktop.split("/").pop();
   const tabletPath = "/image/" + product.image.tablet.split("/").pop();
   const mobilePath = "/image/" + product.image.mobile.split("/").pop();
-  const thumbnailPath = "/image/" + product.image.thumbnail.split("/").pop();
   return (
     <div className="flex flex-col p-1">
-      <Image
-        className="sm:hidden max-sm:block border-2 rounded-xl"
-        src={thumbnailPath}
-        alt={product.name}
-        width={100}
-        height={96}
-      />
       <Image
         className="max-md:block md:hidden border-2  rounded-xl"
         src={mobilePath}
@@ -23,7 +15,7 @@ export default function ProductCard({ product }: { product: Product }) {
         height={424}
       />
       <Image
-        className="max-md:hidden max-xl:block hidden border-2  rounded-xl"
+        className="max-md:hidden max-xl:block hidden border-2 rounded-xl"
         src={tabletPath}
         alt={product.name}
         width={427}
