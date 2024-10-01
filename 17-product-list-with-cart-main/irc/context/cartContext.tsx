@@ -66,7 +66,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
             : cartItem
         );
       } else {
-        const thumbnailPath = "/image/" + item.image.desktop.split("/").pop();
+        const thumbnailPath = "/image/" + item.image.thumbnail.split("/").pop();
         return [...prevItems, { ...item, image: thumbnailPath, quantity: 1 }];
       }
       return prevItems;
